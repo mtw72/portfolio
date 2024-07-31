@@ -1,0 +1,87 @@
+@use 'sass:map';
+@use './variables' as *;
+@use './breakpoints' as *;
+@use './functions' as f;
+
+
+//general media Query 
+@mixin min-mq($key) {
+    $size: map.get($breakpoints-min, $key);
+
+    @media all and (min-width: $size) {
+        @content;
+    }
+}
+
+@mixin max-mq($key) {
+    $size: map.get($breakpoints-max, $key);
+
+    @media all and (max-width: $size) {
+        @content;
+    }
+}
+
+// between the min value of breakpoint 1 & max value of breakpoint 2
+@mixin between-mq($smallerbreakpoint, $largerbreakpoint) {
+    $min-size: map.get($breakpoints-min, $smallerbreakpoint);
+    $max-size: map.get($breakpoints-max, $largerbreakpoint);
+
+    @media all and (min-width: $min-size) and (max-width: $max-size) {
+        @content;
+    }
+}
+
+
+// custom media query
+@mixin custom-min-mq($breakpoint) {
+    $size: f.em($breakpoint);
+
+    @media all and (min-width: $size) {
+        @content;
+    }
+}
+
+@mixin custom-max-mq($breakpoint) {
+    $size: f.em(calc($breakpoint - .02));
+
+    @media all and (max-width: $size) {
+        @content;
+    }
+}
+
+// between the min value of breakpoint 1 & max value of breakpoint 2
+@mixin custom-between-mq($breakpoint1, $breakpoint2) {
+    $min-size: f.em($breakpoint1);
+    $max-size: f.em(calc($breakpoint2 - .02));
+
+    @media all and (min-width: $min-size) and (max-width: $max-size) {
+        @content;
+    }
+}
+
+
+// h1 styles for menu and reservation
+@mixin h2-styles($margin-bottom) {
+    margin-bottom: $margin-bottom;
+    text-align: center;
+
+    @include min-mq(xs) {
+        margin-bottom: 2rem;
+    }
+
+    @include min-mq(md) {
+        margin-bottom: 2.5rem;
+    }
+
+    @include min-mq(lg) {
+        margin-bottom: 3rem;
+    }
+
+    @include min-mq(xl) {
+        margin-bottom: 3.5rem;
+    }
+
+    @include min-mq(xxl) {
+        margin-bottom: 4rem;
+    }
+}

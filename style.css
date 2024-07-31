@@ -1,0 +1,169 @@
+/* Slideshow container */
+.carousel {
+    position: relative;
+    margin: auto;
+    max-width: 350px;
+    min-height: 600px;
+    overflow: hidden;
+
+    /* // @include min-mq (xs) {
+    //     margin-top: f.rem(45);
+    // } */
+}
+
+/* Hide the images by default */
+.carousel__slide {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transition: left 1s ease;
+}
+
+/* Show the current slide */
+.carousel__slide.current-slide {
+    left: 0;
+    z-index: 7;
+}
+
+/* Move the previous slide off-screen to the left */
+.carousel__slide.previous-slide {
+    left: -100%;
+}
+
+/* Move the next slide off-screen to the right */
+.carousel__slide.next-slide {
+    left: 100%;
+}
+
+/* Cover element to hide previous slides */
+.carousel__cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 350px;
+    height: 480px;
+    background: white;
+    z-index: 4;
+}
+
+.carousel__image {
+    display: block;
+    margin-inline: auto;
+    width: 100%;
+    height: auto;
+    border-radius: 5px 5px 0 0;
+}
+
+/* // carousel text */
+.carousel__image-description {
+    margin-inline: auto;
+    /* // padding: f.rem(6) f.rem(12); */
+    width: 85%;
+    max-width: 350px;
+    text-align: center;
+    border-radius: 0 0 5px 5px;
+}
+
+/* //Next & previous buttons */
+.carousel__prev-button,
+.carousel__next-button {
+    cursor: pointer;
+    position: absolute;
+    top: 45%;
+    width: auto;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: 0.6s ease;
+    user-select: none;
+    border: 0;
+    background-color: transparent;
+    z-index: 163;
+}
+
+.carousel__prev-button {
+    left: -4px;
+}
+
+.carousel__next-button {
+    right: -4px;
+}
+
+/* // @include min-mq (xs) {
+
+//     .carousel__prev-button,
+//     .carousel__next-button {
+//         top: 42%;
+//         font-size: 1.25rem;
+//         transition: 0.6s ease;
+//         padding: 1rem;
+//     }
+
+//     .carousel__prev-button {
+//         left: -30px;
+//     }
+
+//     .carousel__next-button {
+//         right: -30px;
+//     }
+// } */
+
+/* The dots indicators */
+.carousel__bottom-control {
+    margin-top: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    z-index: 163;
+}
+
+.carousel__progress-list {
+    display: flex;
+    flex-direction: row;
+    min-width: 150px;
+}
+
+.carousel__pause-button,
+.carousel__play-button {
+    border: none;
+    background-color: transparent;
+    display: block;
+}
+
+.carousel__pause-button.hidden,
+.carousel__play-button.hidden {
+    display: none;
+}
+
+.carousel__progress-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin: 0 5px;
+    padding: 0;
+}
+
+.carousel__progress-bar {
+    margin: 0;
+    padding: 0;
+    height: 0.75rem;
+    width: 0.75rem;
+    border-radius: 100%;
+    border: none;
+    box-shadow: none;
+    cursor: pointer;
+    /* !!!!addd this */
+}
+
+.current-container {
+    max-width: 3.5rem;
+    width: 100%;
+    height: 0.75rem;
+    border-radius: 0.75rem;
+}
+
+.current-bar {
+    width: 0%;
+    border-radius: 0.75rem;
+}

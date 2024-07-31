@@ -1,0 +1,54 @@
+@use 'sass:math';
+
+//px to em units
+//Throw an error if the parameter has a unit
+@function em($pixel) {
+  @if math.is-unitless($pixel) {
+    @return math.div($pixel, 16) + em;
+     //if $pixel has no unit, divide it by 16 and return the result 
+  }
+  @else {
+     //otherwise throw an error
+     @error 'Don\'t use units when using the em() function; only numbers.';
+  }
+}
+
+//px to em units
+//Throw an error if the parameter has a unit
+@function rem($pixel) {
+  @if math.is-unitless($pixel) {
+    @return math.div($pixel, 16) + rem;
+    //if $pixel has no unit, divide it by 16 and return the result 
+  }
+  @else {
+    //otherwise throw an error
+    @error 'Don\'t use units when using the rem() function; only numbers.';
+  }
+}
+
+
+// calculation of em-breakpoints for media queries
+@function calculate-em-min($value) {
+  @if math.is-unitless($value) {
+    @return em($value);
+  }
+  @else {
+    @error 'Don\'t use units when using the calculate-em-min() function; only numbers.';}
+}
+
+@function calculate-em-max($value) {
+  @if math.is-unitless($value) {
+    @return em(calc($value - 0.02));
+  }
+  @else {
+    @error 'Don\'t use units when using the calculate-em-max() function; only numbers.';}
+}
+
+@function generate-breakpoints($breakpoints, $calculation) {
+  $result: ();
+
+  @each $key, $value in $breakpoints {
+  $result: map-merge($result, ($key: call(get-function($calculation),$value)));
+  }
+  @return $result;
+}
