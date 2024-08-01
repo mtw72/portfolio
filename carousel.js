@@ -4,7 +4,7 @@
 
 // ******** VARIABLES ******** //
 
-// Set the time for autoplay
+// Set the time interval for autoplay
 const time = 3.5; //3.5 seconds
 const timeInterval = time * 1000 / 100;
 
@@ -15,6 +15,7 @@ const prevButton = document.querySelector(".carousel__prev-button");
 const nextButton = document.querySelector(".carousel__next-button");
 const playButton = document.querySelector(".carousel__play-button");
 const pauseButton = document.querySelector(".carousel__pause-button");
+const transitionButtons = document.querySelectorAll('.carousel__transition-button');
 const progressList = document.querySelector(".carousel__progress-list");
 const progressContainers = document.getElementsByClassName("carousel__progress-container");
 const progressBars = document.getElementsByClassName("carousel__progress-bar");
@@ -31,10 +32,10 @@ let isPlay = true;
 
 // ******** INITIALIZATION ******** //
 
-// Initialize the slide index to the first slide
+// Initialize the slide number to the first slide
 let slideNumber = 1;
 let currentSlideNumber = 1; // Variable to keep track of the current slide
-const totalSlides = slides.length;
+let isTransitioning = false; // Flag to indicate if a transition is in progress
 showSlides(slideNumber);
 progressStart();
 
@@ -244,6 +245,7 @@ function plusSlides(n) {
   slideNumber += n;
   showSlides(slideNumber);
   postUpdateByUser();
+  slideTransition();
 }
 
 // Function to display the slide corresponding to a given dot
@@ -252,6 +254,7 @@ function currentSlide(n) {
   slideNumber = n;
   showSlides(n);
   postUpdateByUser();
+  slideTransition();
 }
 
 // Helper function to post-update the carousel initiated by user
@@ -275,4 +278,28 @@ function togglePlayPauseButtons() {
 function focusProgress() {
   currentProgressBar = document.querySelector(".carousel__progress-bar.current-bar");
   currentProgressBar.focus();
+}
+
+function slideTransition() {
+  // Check if a transition is already in progress
+  if (isTransitioning) return;
+
+  // Set the flag to true to indicate a transition is starting
+  isTransitioning = true;
+
+  // Disable the buttons by adding a 'disabled' class
+  transitionButtons.forEach(button => button.classList.add('disabled'));
+
+  // Slide change logic here
+  // For example, update the current slide index
+  // updateSlide(currentIndex + direction);
+
+  // Use a timeout to wait for the transition to complete
+  setTimeout(() => {
+    // Reset the flag to false after the transition time
+    isTransitioning = false;
+
+    // Re-enable the buttons by removing the 'disabled' class
+    transitionButtons.forEach(button => button.classList.remove('disabled'));
+  }, 1000); // 1000ms = 1 second
 }

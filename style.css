@@ -136,6 +136,11 @@
     display: none;
 }
 
+.carousel__transition-button.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
 .carousel__progress-container {
     display: flex;
     align-items: center;
