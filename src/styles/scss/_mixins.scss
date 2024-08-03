@@ -58,30 +58,3 @@
         @content;
     }
 }
-
-
-// h1 styles for menu and reservation
-@mixin h2-styles($margin-bottom) {
-    margin-bottom: $margin-bottom;
-    text-align: center;
-
-    @include min-mq(xs) {
-        margin-bottom: 2rem;
-    }
-
-    @include min-mq(md) {
-        margin-bottom: 2.5rem;
-    }
-
-    @include min-mq(lg) {
-        margin-bottom: 3rem;
-    }
-
-    @include min-mq(xl) {
-        margin-bottom: 3.5rem;
-    }
-
-    @include min-mq(xxl) {
-        margin-bottom: 4rem;
-    }
-}

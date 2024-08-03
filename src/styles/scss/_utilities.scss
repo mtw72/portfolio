@@ -1,0 +1,32 @@
+// clearfix
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+// skip-link for keyboard users
+.skip-link {
+    position: absolute;
+    left: 50%;
+    top: 2px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    transform: translateX(-50%);
+
+    &:focus {
+        position: fixed;
+        width: auto;
+        height: auto;
+        padding-inline: 2rem;
+        padding-block: 0.5rem;
+    }
+}
+
+.webp,
+.temp-img {
+    max-width: 100px;
+    width: 90%;
+    height: auto;
+}

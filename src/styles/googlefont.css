@@ -1,0 +1,21 @@
+/* Google fonts for logo */
+/* Dancing Script */
+@font-face {
+    font-family: 'Dancing Script';
+    font-style: normal;
+    font-weight: bold;
+    src: url('../assets/webfonts/googlefonts/DancingScript-Bold.woff2') format('woff2'),
+        url('../assets/webfonts/googlefonts/DancingScript-Bold.ttf') format('ttf');
+    font-display: swap;
+}
+
+/* Google font for body */
+/* Rancho */
+@font-face {
+    font-family: 'Rancho';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../assets/webfonts/googlefonts/Rancho-Regular.woff2') format('woff2'),
+        url('../assets/webfonts/googlefonts/Rancho-Regular.ttf') format('ttf');
+    font-display: swap;
+}

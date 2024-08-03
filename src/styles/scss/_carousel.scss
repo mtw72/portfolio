@@ -1,55 +1,74 @@
+@use './mixins' as *;
+@use './functions' as f;
+
 /* Slideshow container */
 .carousel {
     position: relative;
     margin: auto;
     max-width: 350px;
+    min-height: 600px;
+    overflow: hidden;
 
-    // @include min-mq (xs) {
+    /* // @include min-mq (xs) {
     //     margin-top: f.rem(45);
-    // }
+    // } */
 }
 
 /* Hide the images by default */
 .carousel__slide {
-    display: none;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transition: left 1s ease;
 }
 
-/* Fading animation */
+/* Show the current slide */
 .carousel__slide.current-slide {
-    display: block;
-    // animation-name: slide;
-    animation-duration: 0.5s;
+    left: 0;
+    z-index: 7;
 }
 
-// @keyframes slide {
-//     from {
-//         opacity: 0.8;
-//     }
+/* Move the previous slide off-screen to the left */
+.carousel__slide.previous-slide {
+    left: -100%;
+}
 
-//     to {
-//         opacity: 1;
-//     }
-// }
+/* Move the next slide off-screen to the right */
+.carousel__slide.next-slide {
+    left: 100%;
+}
+
+/* Cover element to hide previous slides */
+.carousel__cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 350px;
+    height: 480px;
+    background: white;
+    z-index: 4;
+}
 
 .carousel__image {
     display: block;
     margin-inline: auto;
-    width: 85%;
+    width: 100%;
     height: auto;
     border-radius: 5px 5px 0 0;
 }
 
-// carousel text
+/* // carousel text */
 .carousel__image-description {
     margin-inline: auto;
-    // padding: f.rem(6) f.rem(12);
+    /* // padding: f.rem(6) f.rem(12); */
     width: 85%;
     max-width: 350px;
     text-align: center;
     border-radius: 0 0 5px 5px;
 }
 
-//Next & previous buttons
+/* //Next & previous buttons */
 .carousel__prev-button,
 .carousel__next-button {
     cursor: pointer;
@@ -62,6 +81,7 @@
     user-select: none;
     border: 0;
     background-color: transparent;
+    z-index: 163;
 }
 
 .carousel__prev-button {
@@ -72,7 +92,7 @@
     right: -4px;
 }
 
-// @include min-mq (xs) {
+/* // @include min-mq (xs) {
 
 //     .carousel__prev-button,
 //     .carousel__next-button {
@@ -89,21 +109,22 @@
 //     .carousel__next-button {
 //         right: -30px;
 //     }
-// }
+// } */
 
 /* The dots indicators */
 .carousel__bottom-control {
-    margin-top: 0.5rem;
+    margin-top: 500px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    z-index: 163;
 }
 
 .carousel__progress-list {
     display: flex;
     flex-direction: row;
-    min-width: 110px;
+    min-width: 150px;
 }
 
 .carousel__pause-button,
@@ -118,9 +139,14 @@
     display: none;
 }
 
+.carousel__transition-button.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
 .carousel__progress-container {
     display: flex;
-    align-items: center; // Ensures vertical alignment within the container
+    align-items: center;
     cursor: pointer;
     margin: 0 5px;
     padding: 0;
@@ -134,10 +160,11 @@
     border-radius: 100%;
     border: none;
     box-shadow: none;
+    cursor: pointer;
 }
 
 .current-container {
-    max-width: 3.5rem; // 3.5 seconds
+    max-width: 3.5rem;
     width: 100%;
     height: 0.75rem;
     border-radius: 0.75rem;
