@@ -22,15 +22,20 @@ const progressBars = document.getElementsByClassName("carousel__progress-bar");
 const bar1 = document.getElementById("bar1");
 const bar2 = document.getElementById("bar2");
 const bar3 = document.getElementById("bar3");
+const bar4 = document.getElementById("bar4");
+const bar5 = document.getElementById("bar5");
 
 // Create variables for progress bar
 let currentProgressContainer = document.querySelector(".carousel__progress-container.current-container");
 let currentProgressBar = document.querySelector(".carousel__progress-bar.current-bar");
-let width = 0, memo, dynamicFrame;
+let width = 0, memo, dynamicFrame, i;
 let isPlay = true;
 
 
 // ******** INITIALIZATION ******** //
+
+// Set attributes of the carousel track and the progress bar
+setAttributes();
 
 // Initialize the slide number to the first slide
 let slideNumber = 1;
@@ -191,10 +196,18 @@ function checkDotColor(slideNumber) {
   [...progressBars].forEach(bar => bar.classList.remove("finished-bar"));
   if (slideNumber === 2) {
     bar1.classList.add("finished-bar");
-  }
-  if (slideNumber === 3) {
+  } else if (slideNumber === 3) {
     bar1.classList.add("finished-bar");
     bar2.classList.add("finished-bar");
+  } else if (slideNumber === 4) {
+    bar1.classList.add("finished-bar");
+    bar2.classList.add("finished-bar");
+    bar3.classList.add("finished-bar");
+  } else if (slideNumber === 5) {
+    bar1.classList.add("finished-bar");
+    bar2.classList.add("finished-bar");
+    bar3.classList.add("finished-bar");
+    bar4.classList.add("finished-bar");
   }
 }
 
@@ -280,26 +293,27 @@ function focusProgress() {
   currentProgressBar.focus();
 }
 
+// Function to stop further transition when the next button, previous button or current slide button is activated
 function slideTransition() {
   // Check if a transition is already in progress
   if (isTransitioning) return;
 
-  // Set the flag to true to indicate a transition is starting
   isTransitioning = true;
-
-  // Disable the buttons by adding a 'disabled' class
   transitionButtons.forEach(button => button.classList.add('disabled'));
-
-  // Slide change logic here
-  // For example, update the current slide index
-  // updateSlide(currentIndex + direction);
 
   // Use a timeout to wait for the transition to complete
   setTimeout(() => {
-    // Reset the flag to false after the transition time
     isTransitioning = false;
-
-    // Re-enable the buttons by removing the 'disabled' class
     transitionButtons.forEach(button => button.classList.remove('disabled'));
-  }, 1000); // 1000ms = 1 second
+  }, 1000);
+}
+
+// Function to set attributes of the carousel track and the progress bar
+function setAttributes() {
+  for (i = 0; i < slides.length; i++) {
+    slides[i].setAttribute('id', `carousel-slide${i + 1}`);
+    slides[i].setAttribute('aria-label', `Slide ${i + 1} of ${slides.length}`);
+    progressBars[i].setAttribute('aria-label', `Slide ${i + 1}`);
+    progressBars[i].setAttribute('aria-controls', `carousel-slide${i + 1}`);
+  }
 }
