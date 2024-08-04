@@ -9,21 +9,21 @@
 @use './carousel' as *;
 @use './colors' as *;
 @use './typography' as *;
-@use './r2place' as *;
+@use './layout' as *;
 
 
-@forward '../variables';
-@forward '../functions';
-@forward '../utilities';
-@forward '../fonts';
-@forward '../breakpoints';
-@forward '../mixins';
-@forward '../layers';
+// @forward '../variables';
+// @forward '../functions';
+// @forward '../utilities';
+// @forward '../fonts';
+// @forward '../breakpoints';
+// @forward '../mixins';
+// @forward '../layers';
 
-@forward '../carousel';
-@forward '../colors';
-@forward '../typography';
-@forward '../r2place';
+// @forward '../carousel';
+// @forward '../colors';
+// @forward '../typography';
+// @forward '../r2place';
 
 
 // @forward '../scss-common-partials/variables';

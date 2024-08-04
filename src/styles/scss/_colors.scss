@@ -1,143 +1,143 @@
-@use '../../scss-common-partials/variables' as *;
-@use '../../scss-common-partials/mixins' as *;
+@use './variables' as *;
+@use './mixins' as *;
 
-body {
-    background-color: $yellow-1a;
-}
+// body {
+//     background-color: $yellow-1a;
+// }
 
-hr {
-    border: 1px solid $orange-1;
-}
+// hr {
+//     border: 1px solid $orange-1;
+// }
 
-:focus {
-    outline: 2px solid $orange-2;
-}
+// :focus {
+//     outline: 2px solid $orange-2;
+// }
 
-// skip-link for keyboard users
-.skip-link {
-    background-color: $red-1;
-    color: $white-1;
-}
+// // skip-link for keyboard users
+// .skip-link {
+//     background-color: $red-1;
+//     color: $white-1;
+// }
 
-// navbar
-.navbar {
-    background-color: $yellow-2a;
-    color: $black-1;
-}
+// // navbar
+// .navbar {
+//     background-color: $yellow-2a;
+//     color: $black-1;
+// }
 
-.navbar__brand {
-    color: $black-1;
-}
+// .navbar__brand {
+//     color: $black-1;
+// }
 
-.navbar__toggler {
-    background-color: transparent;
-    color: $grey-3;
-    border: transparent;
-    outline: 1px solid $grey-2;
+// .navbar__toggler {
+//     background-color: transparent;
+//     color: $grey-3;
+//     border: transparent;
+//     outline: 1px solid $grey-2;
 
-    &:focus {
-        outline: 2px solid $grey-3;
-    }
-}
+//     &:focus {
+//         outline: 2px solid $grey-3;
+//     }
+// }
 
-.navbar__nav-link {
-    color: $grey-1;
+// .navbar__nav-link {
+//     color: $grey-1;
 
-    &:visited {
-        color: $brown-1;
-    }
+//     &:visited {
+//         color: $brown-1;
+//     }
 
-    &:active {
-        color: $grey-3;
-    }
-}
+//     &:active {
+//         color: $grey-3;
+//     }
+// }
 
-// home
-#home {
-    border-bottom: 1px solid $orange-1;
-}
+// // home
+// #home {
+//     border-bottom: 1px solid $orange-1;
+// }
 
-.hero-text {
-    color: $white-2;
-}
+// .hero-text {
+//     color: $white-2;
+// }
 
-// small menu
-//buttons when the accordion panel is close
-.accordion__button {
-    background-color: $orange-3;
-    color: $black-1;
+// // small menu
+// //buttons when the accordion panel is close
+// .accordion__button {
+//     background-color: $orange-3;
+//     color: $black-1;
 
-    &:hover {
-        background-color: $brown-2;
-        color: $yellow-2;
-    }
+//     &:hover {
+//         background-color: $brown-2;
+//         color: $yellow-2;
+//     }
 
-    //"plus" sign (+) 
-    &:after {
-        color: $grey-3;
-    }
+//     //"plus" sign (+) 
+//     &:after {
+//         color: $grey-3;
+//     }
 
-    &:focus {
-        outline: 2px solid $orange-2;
+//     &:focus {
+//         outline: 2px solid $orange-2;
 
-        &:after {
-            color: $yellow-2;
-        }
-    }
-}
+//         &:after {
+//             color: $yellow-2;
+//         }
+//     }
+// }
 
-//buttons when the accordion panel is open
-.accordion__button--active {
-    background-color: $brown-2;
-    color: $yellow-2;
+// //buttons when the accordion panel is open
+// .accordion__button--active {
+//     background-color: $brown-2;
+//     color: $yellow-2;
 
-    // "minus" sign (-)
-    &:after {
-        color: $yellow-2;
-    }
-}
+//     // "minus" sign (-)
+//     &:after {
+//         color: $yellow-2;
+//     }
+// }
 
-/* Style the accordion panel. Note: hidden by default */
-.accordion__panel {
-    background-color: $white-1;
-}
+// /* Style the accordion panel. Note: hidden by default */
+// .accordion__panel {
+//     background-color: $white-1;
+// }
 
-// large menu
-.menu__tab {
-    background-color: $yellow-6a;
-    color: $brown-2;
-    border: 1px solid $yellow-4;
+// // large menu
+// .menu__tab {
+//     background-color: $yellow-6a;
+//     color: $brown-2;
+//     border: 1px solid $yellow-4;
 
-    &:hover {
-        font-weight: bold;
-        background-color: $brown-3;
-        color: $white-2;
-        border: 1px solid $brown-3;
-    }
+//     &:hover {
+//         font-weight: bold;
+//         background-color: $brown-3;
+//         color: $white-2;
+//         border: 1px solid $brown-3;
+//     }
 
-    &--active {
-        background-color: $brown-2;
-        color: $yellow-5;
-        border: 1px solid $brown-3;
-    }
-}
+//     &--active {
+//         background-color: $brown-2;
+//         color: $yellow-5;
+//         border: 1px solid $brown-3;
+//     }
+// }
 
-// menu content
-.menu__panel {
-    background-color: $white-1;
-    border: 1px solid $brown-5;
-}
+// // menu content
+// .menu__panel {
+//     background-color: $white-1;
+//     border: 1px solid $brown-5;
+// }
 
-.menu__item {
-    border-bottom: 1px solid $brown-5;
+// .menu__item {
+//     border-bottom: 1px solid $brown-5;
 
-    @include min-mq(md) {
-        border-right: 1px solid $brown-5;
-    }
-}
+//     @include min-mq(md) {
+//         border-right: 1px solid $brown-5;
+//     }
+// }
 
-.menu__item-price {
-    background-color: $yellow-6a;
-    color: $brown-2;
-    box-shadow: 1px 1px 2px $brown-3;
-}
+// .menu__item-price {
+//     background-color: $yellow-6a;
+//     color: $brown-2;
+//     box-shadow: 1px 1px 2px $brown-3;
+// }
