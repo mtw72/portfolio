@@ -1,9 +1,45 @@
 @use './variables' as *;
 @use './mixins' as *;
+@use './functions' as f;
 
-// body {
-//     background-color: $yellow-1a;
-// }
+body {
+    background-color: #F5F7F8;
+    color: #707070;
+    color: #304D30;
+}
+
+h1,
+h2 {
+    color: #163020;
+}
+
+h3,
+h4,
+h5,
+h6 {
+    color: #76885B;
+    color: #707070;
+}
+
+button {
+    display: block;
+    width: f.rem(200);
+    height: f.rem(50);
+    background-color: #76885B;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: f.rem(16);
+}
+
+button a {
+    text-decoration: none;
+}
+
+a {
+    color: #76885B;
+}
 
 // hr {
 //     border: 1px solid $orange-1;
@@ -19,125 +55,35 @@
 //     color: $white-1;
 // }
 
-// // navbar
-// .navbar {
-//     background-color: $yellow-2a;
-//     color: $black-1;
-// }
+// carousel
+/* Caption text */
+.carousel__image-description {
+    background-color: #76885B;
+    color: white;
+    // border-top: 1px solid $brown-7;
+}
 
-// .navbar__brand {
-//     color: $black-1;
-// }
+//Next & previous buttons
+.carousel__prev-button,
+.carousel__next-button {
+    color: #76885B;
+}
 
-// .navbar__toggler {
-//     background-color: transparent;
-//     color: $grey-3;
-//     border: transparent;
-//     outline: 1px solid $grey-2;
+.carousel__progress-container {
+    background-color: transparent;
+}
 
-//     &:focus {
-//         outline: 2px solid $grey-3;
-//     }
-// }
+.current-container,
+.carousel__progress-bar {
+    background-color: #BFCCB5;
+}
 
-// .navbar__nav-link {
-//     color: $grey-1;
+.carousel__progress-list:focus,
+.current-bar:focus {
+    // outline: 2px solid $orange-2;
+}
 
-//     &:visited {
-//         color: $brown-1;
-//     }
-
-//     &:active {
-//         color: $grey-3;
-//     }
-// }
-
-// // home
-// #home {
-//     border-bottom: 1px solid $orange-1;
-// }
-
-// .hero-text {
-//     color: $white-2;
-// }
-
-// // small menu
-// //buttons when the accordion panel is close
-// .accordion__button {
-//     background-color: $orange-3;
-//     color: $black-1;
-
-//     &:hover {
-//         background-color: $brown-2;
-//         color: $yellow-2;
-//     }
-
-//     //"plus" sign (+) 
-//     &:after {
-//         color: $grey-3;
-//     }
-
-//     &:focus {
-//         outline: 2px solid $orange-2;
-
-//         &:after {
-//             color: $yellow-2;
-//         }
-//     }
-// }
-
-// //buttons when the accordion panel is open
-// .accordion__button--active {
-//     background-color: $brown-2;
-//     color: $yellow-2;
-
-//     // "minus" sign (-)
-//     &:after {
-//         color: $yellow-2;
-//     }
-// }
-
-// /* Style the accordion panel. Note: hidden by default */
-// .accordion__panel {
-//     background-color: $white-1;
-// }
-
-// // large menu
-// .menu__tab {
-//     background-color: $yellow-6a;
-//     color: $brown-2;
-//     border: 1px solid $yellow-4;
-
-//     &:hover {
-//         font-weight: bold;
-//         background-color: $brown-3;
-//         color: $white-2;
-//         border: 1px solid $brown-3;
-//     }
-
-//     &--active {
-//         background-color: $brown-2;
-//         color: $yellow-5;
-//         border: 1px solid $brown-3;
-//     }
-// }
-
-// // menu content
-// .menu__panel {
-//     background-color: $white-1;
-//     border: 1px solid $brown-5;
-// }
-
-// .menu__item {
-//     border-bottom: 1px solid $brown-5;
-
-//     @include min-mq(md) {
-//         border-right: 1px solid $brown-5;
-//     }
-// }
-
-// .menu__item-price {
-//     background-color: $yellow-6a;
-//     color: $brown-2;
-//     box-shadow: 1px 1px 2px $brown-3;
-// }
+.current-bar,
+.finished-bar {
+    background-color: #76885B;
+}

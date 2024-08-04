@@ -1,0 +1,27 @@
+/* CSS styles for users with JavaScript disabled */
+.loader__container {
+    display: none;
+}
+
+.no-script {
+    z-index: 1000;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+.no-script p {
+    display: block;
+    width: auto;
+    background-color: whitesmoke;
+    color: black;
+    border: 1px solid black;
+    padding-inline: 5px;
+    margin-inline: 2.5%;
+    letter-spacing: 0.8px;
+    margin-top: 6rem;
+    margin-bottom: 1rem;
+}

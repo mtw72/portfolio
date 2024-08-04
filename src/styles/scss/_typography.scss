@@ -1,11 +1,27 @@
 @use './variables' as *;
 @use './colors' as *;
 @use './fonts' as *;
+@use './functions' as f;
 
-// body {
-//     font-family: $bodyfont;
-//     font-size: clamp(1.25rem, 0.9rem + 1vw, 1.5rem);
-// }
+body {
+    font-family: $bodyfont;
+    font-weight: 400;
+    font-size: f.rem(20);
+}
+
+h1 {
+    font-family: $headingfont;
+    font-weight: 600;
+    letter-spacing: -.1rem;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    letter-spacing: -.04rem;
+}
 
 // // logo font in navbar and findus
 // .logofont {

@@ -244,4 +244,105 @@
   width: 0%;
   border-radius: 0.75rem;
 }
+
+body {
+  background-color: #F5F7F8;
+  color: #707070;
+  color: #304D30;
+}
+
+h1,
+h2 {
+  color: #163020;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  color: #76885B;
+  color: #707070;
+}
+
+button {
+  display: block;
+  width: 12.5rem;
+  height: 3.125rem;
+  background-color: #76885B;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+button a {
+  text-decoration: none;
+}
+
+a {
+  color: #76885B;
+}
+
+/* Caption text */
+.carousel__image-description {
+  background-color: #76885B;
+  color: white;
+}
+
+.carousel__prev-button,
+.carousel__next-button {
+  color: #76885B;
+}
+
+.carousel__progress-container {
+  background-color: transparent;
+}
+
+.current-container,
+.carousel__progress-bar {
+  background-color: #BFCCB5;
+}
+
+.current-bar,
+.finished-bar {
+  background-color: #76885B;
+}
+
+body {
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 1.25rem;
+}
+
+h1 {
+  font-family: "MontSerrat", Tahoma, Arial, sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.1rem;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: -0.04rem;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
 /*# sourceMappingURL=r2place-main.css.map */
