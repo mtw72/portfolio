@@ -5,8 +5,10 @@
 .carousel {
     position: relative;
     margin: auto;
-    max-width: 350px;
-    min-height: 600px;
+    max-width: f.rem(500);
+    height: 100%;
+    // max-width: 940px;
+    // min-height: 810px;
     overflow: hidden;
 
     /* // @include min-mq (xs) {
@@ -44,8 +46,8 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 350px;
-    height: 480px;
+    width: 81px;
+    height: 600px;
     background: white;
     z-index: 4;
 }
@@ -113,7 +115,7 @@
 
 /* The dots indicators */
 .carousel__bottom-control {
-    margin-top: 500px;
+    margin-top: 600px;
     display: flex;
     flex-direction: row;
     justify-content: center;

@@ -5,7 +5,7 @@
 // ******** VARIABLES ******** //
 
 // Set the time interval for autoplay
-const time = 3.5; //3.5 seconds
+const time = 5; //5 seconds
 const timeInterval = time * 1000 / 100;
 
 // Get the elements in carousel
@@ -22,8 +22,8 @@ const progressBars = document.getElementsByClassName("carousel__progress-bar");
 const bar1 = document.getElementById("bar1");
 const bar2 = document.getElementById("bar2");
 const bar3 = document.getElementById("bar3");
-const bar4 = document.getElementById("bar4");
-const bar5 = document.getElementById("bar5");
+// const bar4 = document.getElementById("bar4");
+// const bar5 = document.getElementById("bar5");
 
 // Create variables for progress bar
 let currentProgressContainer = document.querySelector(".carousel__progress-container.current-container");

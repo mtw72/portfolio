@@ -18,7 +18,7 @@ node_modules/
 *.tar
 *.zip
 *.tgz
-*.map
+# *.map
 
 # Logs and databases #
 ######################

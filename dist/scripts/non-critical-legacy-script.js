@@ -11,7 +11,7 @@ function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o =
 function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
 function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
-var time = 3.5; //3.5 seconds
+var time = 5; //5 seconds
 var timeInterval = time * 1000 / 100;
 
 // Get the elements in carousel
@@ -28,8 +28,8 @@ var progressBars = document.getElementsByClassName("carousel__progress-bar");
 var bar1 = document.getElementById("bar1");
 var bar2 = document.getElementById("bar2");
 var bar3 = document.getElementById("bar3");
-var bar4 = document.getElementById("bar4");
-var bar5 = document.getElementById("bar5");
+// const bar4 = document.getElementById("bar4");
+// const bar5 = document.getElementById("bar5");
 
 // Create variables for progress bar
 var currentProgressContainer = document.querySelector(".carousel__progress-container.current-container");

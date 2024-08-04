@@ -53,8 +53,8 @@
 .carousel {
   position: relative;
   margin: auto;
-  max-width: 350px;
-  min-height: 600px;
+  max-width: 31.25rem;
+  height: 100%;
   overflow: hidden;
   /* // @include min-mq (xs) {
   //     margin-top: f.rem(45);
@@ -92,8 +92,8 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 350px;
-  height: 480px;
+  width: 81px;
+  height: 600px;
   background: white;
   z-index: 4;
 }
@@ -164,7 +164,7 @@
 // } */
 /* The dots indicators */
 .carousel__bottom-control {
-  margin-top: 500px;
+  margin-top: 600px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -302,6 +302,11 @@ a {
 .current-container,
 .carousel__progress-bar {
   background-color: #BFCCB5;
+}
+
+.carousel__progress-list:focus,
+.current-bar:focus {
+  outline: 2px solid #A7D397;
 }
 
 .current-bar,
