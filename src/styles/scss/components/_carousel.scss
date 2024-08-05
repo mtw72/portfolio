@@ -1,5 +1,5 @@
-@use './mixins' as *;
-@use './functions' as f;
+@use '../partials/mixins' as *;
+@use '../partials/functions' as f;
 
 /* Slideshow container */
 .carousel {

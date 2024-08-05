@@ -1,0 +1,22 @@
+@use './variables' as *;
+@use './functions' as *;
+@use './utilities' as *;
+@use './fonts' as *;
+@use './typography' as *;
+@use './colors' as *;
+@use './breakpoints' as *;
+@use './mixins' as *;
+@use './layers' as *;
+
+
+
+
+@forward '../partials/variables';
+@forward '../partials/functions';
+@forward '../partials/utilities';
+@forward '../partials/fonts';
+@forward '../partials/typography';
+@forward '../partials/colors';
+@forward '../partials/breakpoints';
+@forward '../partials/mixins';
+@forward '../partials/layers';

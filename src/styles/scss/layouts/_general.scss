@@ -1,6 +1,6 @@
-@use './mixins' as *;
-@use './variables' as *;
-@use './functions' as f;
+@use '../partials/variables' as *;
+@use '../partials/mixins' as *;
+@use '../partials/functions' as f;
 
 main {
     margin-inline: 1%;

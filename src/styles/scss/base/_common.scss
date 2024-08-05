@@ -1,0 +1,33 @@
+@use '../partials/functions' as f;
+
+html {
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    scroll-behavior: smooth;
+    height: 100%;
+    min-width: f.rem(250);
+}
+
+*,
+::before,
+::after {
+    box-sizing: inherit;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+hr {
+    margin: 0;
+    opacity: .25;
+}
