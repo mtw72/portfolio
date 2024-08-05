@@ -1,3 +1,29 @@
+@use './mixins' as *;
+@use './variables' as *;
+@use './functions' as f;
+
+main {
+    margin-inline: 1%;
+
+    @include min-mq (md) {
+        width: f.rem($mw-sm);
+        margin-inline: auto;
+    }
+
+    @include min-mq (lg) {
+        width: f.rem($mw-md);
+    }
+
+    @include min-mq (xl) {
+        width: f.rem($mw-lg);
+    }
+
+    @include min-mq (xxl) {
+        width: f.rem($mw-xl);
+    }
+}
+
+
 footer {
     display: flex;
     flex-direction: column;

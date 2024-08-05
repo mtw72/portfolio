@@ -109,9 +109,10 @@
 /* // carousel text */
 .carousel__image-description {
   margin-inline: auto;
-  /* // padding: f.rem(6) f.rem(12); */
-  width: 85%;
-  max-width: 350px;
+  padding-block: 0.375rem;
+  width: 100%;
+  max-width: 500px;
+  height: 30px;
   text-align: center;
   border-radius: 0 0 5px 5px;
 }
@@ -164,7 +165,7 @@
 // } */
 /* The dots indicators */
 .carousel__bottom-control {
-  margin-top: 600px;
+  margin-top: 630px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -189,7 +190,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  min-width: 150px;
+  min-width: 110px;
 }
 
 .carousel__pause-button,
@@ -264,7 +265,7 @@ h6 {
   color: #707070;
 }
 
-button {
+.link-button {
   display: block;
   width: 12.5rem;
   height: 3.125rem;
@@ -332,6 +333,31 @@ h4,
 h5,
 h6 {
   letter-spacing: -0.04rem;
+}
+
+main {
+  margin-inline: 1%;
+}
+@media all and (min-width: 48em) {
+  main {
+    width: 25rem;
+    margin-inline: auto;
+  }
+}
+@media all and (min-width: 62em) {
+  main {
+    width: 37.5rem;
+  }
+}
+@media all and (min-width: 76.25em) {
+  main {
+    width: 50rem;
+  }
+}
+@media all and (min-width: 87.5em) {
+  main {
+    width: 62.5rem;
+  }
 }
 
 footer {

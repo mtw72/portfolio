@@ -63,9 +63,10 @@
 /* // carousel text */
 .carousel__image-description {
     margin-inline: auto;
-    /* // padding: f.rem(6) f.rem(12); */
-    width: 85%;
-    max-width: 350px;
+    padding-block: f.rem(6);
+    width: 100%;
+    max-width: 500px;
+    height: 30px;
     text-align: center;
     border-radius: 0 0 5px 5px;
 }
@@ -115,7 +116,7 @@
 
 /* The dots indicators */
 .carousel__bottom-control {
-    margin-top: 600px;
+    margin-top: 630px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -126,7 +127,7 @@
 .carousel__progress-list {
     display: flex;
     flex-direction: row;
-    min-width: 150px;
+    min-width: 110px;
 }
 
 .carousel__pause-button,

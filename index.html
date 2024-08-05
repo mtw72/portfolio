@@ -49,170 +49,163 @@
 <!-- <script defer src="./src/scripts/carousel.js"></script> -->
 
 <body>
-    <div>
-        <h1>R2 Place</h1>
-        <p>A virtual restaurant website with visually appealing, interactive and user-friendly features.</p>
-        <a href="https://mtw72.github.io/R2place/" target="_blank">
-            <button type="button">Link to Live Website</button>
-        </a>
-    </div>
+    <main>
+        <section>
+            <h1>R2 Place</h1>
+            <p>A virtual restaurant website with visually appealing, interactive and user-friendly features.</p>
+            <a href="https://mtw72.github.io/R2place/" target="_blank">
+                <button type="button" class="link-button">Link to Live Website</button>
+            </a>
+        </section>
 
-    <div class="carousel" aria-roledescription="carousel">
-        <div id="carousel__track" aria-live="off">
-            <!-- images with caption text -->
-            <div class="carousel__slide" role="tabpanel" aria-roledescription="slide">
-                <img class="carousel__image" src="./src/assets/images/raw/wireframe-iPad.jpg"
-                    onerror="this.onerror=null; this.src='./src/assets/images/raw/wireframe-iPad.jpg';"
-                    alt="Thai Pineapple Fried Rice" loading="lazy">
-                <!-- <div class="carousel__image-description">Thai Pineapple Fried Rice</div> -->
+        <div class="carousel" aria-roledescription="carousel">
+            <div id="carousel__track" aria-live="off">
+                <!-- images with caption text -->
+                <div class="carousel__slide" role="tabpanel" aria-roledescription="slide">
+                    <img class="carousel__image" src="./src/assets/images/raw/wireframe-iPad.jpg"
+                        onerror="this.onerror=null; this.src='./src/assets/images/raw/wireframe-iPad.jpg';"
+                        alt="Thai Pineapple Fried Rice" loading="lazy">
+                    <div class="carousel__image-description">Wireframing by Figma</div>
+                </div>
+
+                <div class="carousel__slide" role="tabpanel" aria-roledescription="slide">
+                    <img class="carousel__image" src="./src/assets/images/raw/r2-googletest.jpg"
+                        onerror="this.onerror=null; this.src='./images/satay-chicken-skewers.jpeg';"
+                        alt="Satay Chicken Skewers" loading="lazy">
+                    <div class="carousel__image-description">Result of Google PageSpeed Insights</div>
+                </div>
+
+                <div class="carousel__slide" role="tabpanel" aria-roledescription="slide">
+                    <!-- <video width="810" height="940" controls> -->
+                    <video width="500" height="580" controls>
+                        <source src="./src/assets/images/raw/r2-run-gulp.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="carousel__image-description">Using Gulp to automate workflow</div>
+                </div>
             </div>
 
-            <div class="carousel__slide" role="tabpanel" aria-roledescription="slide">
-                <img class="carousel__image" src="./src/assets/images/raw/r2-googletest.jpg"
-                    onerror="this.onerror=null; this.src='./images/satay-chicken-skewers.jpeg';"
-                    alt="Satay Chicken Skewers" loading="lazy">
-                <!-- <div class="carousel__image-description">Satay Chicken Skewers</div> -->
-            </div>
+            <!-- <div class="carousel__cover"></div> -->
 
-            <div class="carousel__slide" role="tabpanel" aria-roledescription="slide">
-                <!-- <video width="810" height="940" controls> -->
-                <video width="500" height="580" controls>
-                    <source src="./src/assets/images/raw/r2-run-gulp.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <!-- <img class="carousel__image" src="./images/satay-chicken-skewers2.webp"
-                    onerror="this.onerror=null; this.src='./images/satay-chicken-skewers2.jpeg';"
-                    alt="Satay Chicken Skewers" loading="lazy"> -->
-                <!-- <div class="carousel__image-description">4</div> -->
-            </div>
+            <!-- Next and previous buttons -->
+            <button class="carousel__prev-button carousel__transition-button" type="button"
+                aria-label="Go to the previous slide" aria-controls="carousel__track">&#10094;</button>
+            <button class="carousel__next-button carousel__transition-button" type="button"
+                aria-label="Go to the next slide" aria-controls="carousel__track">&#10095;</button>
 
-            <!-- <div class="carousel__slide" role="tabpanel" aria-roledescription="slide">
-                <img class="carousel__image" src="./images/satay-chicken-skewers3.webp"
-                    onerror="this.onerror=null; this.src='./images/satay-chicken-skewers3.jpeg';"
-                    alt="Satay Chicken Skewers" loading="lazy"> -->
-            <!-- <div class="carousel__image-description">5</div> -->
-            <!-- </div> -->
-        </div>
+            <div class="carousel__bottom-control">
+                <!-- Play and pause buttons -->
+                <button class="carousel__pause-button" type="button" aria-label="Stop Automatic Slide Show"
+                    aria-hidden="false">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M6 2.8C5.33726 2.8 4.8 3.33726 4.8 4V20C4.8 20.6627 5.33726 21.2 6 21.2H10C10.6627 21.2 11.2 20.6627 11.2 20V4C11.2 3.33726 10.6627 2.8 10 2.8H6ZM7.2 18.8V5.2H8.8V18.8H7.2ZM14 2.8C13.3373 2.8 12.8 3.33726 12.8 4V20C12.8 20.6627 13.3373 21.2 14 21.2H18C18.6627 21.2 19.2 20.6627 19.2 20V4C19.2 3.33726 18.6627 2.8 18 2.8H14ZM15.2 18.8V5.2H16.8V18.8H15.2Z"
+                            fill="#76885B" stroke="#76885B" stroke-width="0.4" stroke-linecap="round"
+                            stroke-linejoin="round">
+                        </path>
+                    </svg>
+                </button>
+                <button class="carousel__play-button hidden" type="button" aria-label="Start Automatic Slide Show"
+                    aria-hidden="true">
+                    <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M5.64891 1.99059C5.27966 1.75321 4.81026 1.7364 4.42497 1.94675C4.03969 2.15709 3.8 2.56103 3.8 3V21C3.8 21.439 4.03969 21.8429 4.42497 22.0533C4.81026 22.2636 5.27966 22.2468 5.64891 22.0094L19.6489 13.0094C19.9924 12.7886 20.2 12.4083 20.2 12C20.2 11.5917 19.9924 11.2114 19.6489 10.9906L5.64891 1.99059ZM6.2 5.198L16.7809 12L6.2 18.802V5.198Z"
+                            fill="#76885B" stroke="#76885B" stroke-width="0.4" stroke-linecap="round"
+                            stroke-linejoin="round">
+                        </path>
+                    </svg>
+                </button>
 
-        <!-- <div class="carousel__cover"></div> -->
-
-        <!-- Next and previous buttons -->
-        <button class="carousel__prev-button carousel__transition-button" type="button"
-            aria-label="Go to the previous slide" aria-controls="carousel__track">&#10094;</button>
-        <button class="carousel__next-button carousel__transition-button" type="button"
-            aria-label="Go to the next slide" aria-controls="carousel__track">&#10095;</button>
-
-        <div class="carousel__bottom-control">
-            <!-- Play and pause buttons -->
-            <button class="carousel__pause-button" type="button" aria-label="Stop Automatic Slide Show"
-                aria-hidden="false">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M6 2.8C5.33726 2.8 4.8 3.33726 4.8 4V20C4.8 20.6627 5.33726 21.2 6 21.2H10C10.6627 21.2 11.2 20.6627 11.2 20V4C11.2 3.33726 10.6627 2.8 10 2.8H6ZM7.2 18.8V5.2H8.8V18.8H7.2ZM14 2.8C13.3373 2.8 12.8 3.33726 12.8 4V20C12.8 20.6627 13.3373 21.2 14 21.2H18C18.6627 21.2 19.2 20.6627 19.2 20V4C19.2 3.33726 18.6627 2.8 18 2.8H14ZM15.2 18.8V5.2H16.8V18.8H15.2Z"
-                        fill="#76885B" stroke="#76885B" stroke-width="0.4" stroke-linecap="round"
-                        stroke-linejoin="round">
-                    </path>
-                </svg>
-            </button>
-            <button class="carousel__play-button hidden" type="button" aria-label="Start Automatic Slide Show"
-                aria-hidden="true">
-                <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M5.64891 1.99059C5.27966 1.75321 4.81026 1.7364 4.42497 1.94675C4.03969 2.15709 3.8 2.56103 3.8 3V21C3.8 21.439 4.03969 21.8429 4.42497 22.0533C4.81026 22.2636 5.27966 22.2468 5.64891 22.0094L19.6489 13.0094C19.9924 12.7886 20.2 12.4083 20.2 12C20.2 11.5917 19.9924 11.2114 19.6489 10.9906L5.64891 1.99059ZM6.2 5.198L16.7809 12L6.2 18.802V5.198Z"
-                        fill="#76885B" stroke="#76885B" stroke-width="0.4" stroke-linecap="round"
-                        stroke-linejoin="round">
-                    </path>
-                </svg>
-            </button>
-
-            <div class="carousel__progress-list" role="tablist" aria-label="Slides" tabindex="0">
-                <div class="carousel__progress-container carousel__transition-button">
-                    <button class="carousel__progress-bar" type="button" role="tab" id="bar1"></button>
-                </div>
-                <div class="carousel__progress-container carousel__transition-button">
-                    <button class="carousel__progress-bar" type="button" role="tab" id="bar2"></button>
-                </div>
-                <div class="carousel__progress-container carousel__transition-button">
-                    <button class="carousel__progress-bar" type="button" role="tab" id="bar3"></button>
-                </div>
-                <!-- <div class="carousel__progress-container carousel__transition-button">
+                <div class="carousel__progress-list" role="tablist" aria-label="Slides" tabindex="0">
+                    <div class="carousel__progress-container carousel__transition-button">
+                        <button class="carousel__progress-bar" type="button" role="tab" id="bar1"></button>
+                    </div>
+                    <div class="carousel__progress-container carousel__transition-button">
+                        <button class="carousel__progress-bar" type="button" role="tab" id="bar2"></button>
+                    </div>
+                    <div class="carousel__progress-container carousel__transition-button">
+                        <button class="carousel__progress-bar" type="button" role="tab" id="bar3"></button>
+                    </div>
+                    <!-- <div class="carousel__progress-container carousel__transition-button">
                     <button class="carousel__progress-bar" type="button" role="tab" id="bar4"></button>
                 </div>
                 <div class="carousel__progress-container carousel__transition-button">
                     <button class="carousel__progress-bar" type="button" role="tab" id="bar5"></button>
                 </div> -->
+                </div>
             </div>
         </div>
-    </div>
 
-    <div>
-        <h2>Technology Used</h2>
-        <ul>
-            <li>Figma - Wireframing</li>
-            <li>HTML - Semantic markup</li>
-            <li>CSS - Preprocessing with SCSS and postprocessing with PostCSS</li>
-            <li>JavaScript – Postprocessing with Babel</li>
-            <li>npm, Gulp - Workflow automation</li>
-            <li>Git, GitHub - Version control</li>
-        </ul>
-    </div>
-
-
-    <div>
-        <h2>Website Design</h2>
-        <ul>
-            <li>Utilized Figma to generate wireframes</li>
-            <li>Implemented layout using CSS Flexbox & Grid</li>
-            <li>Employed SCSS functions and mixins</li>
-            <li>Designed with a mobile-first approach</li>
-            <li>Achieved responsive web design with 8 breakpoints and responsive text</li>
-        </ul>
-    </div>
+        <section>
+            <h2>Technology Used</h2>
+            <ul>
+                <li>Figma - Wireframing</li>
+                <li>HTML - Semantic markup</li>
+                <li>CSS - Preprocessing with SCSS and postprocessing with PostCSS</li>
+                <li>JavaScript – Postprocessing with Babel</li>
+                <li>npm, Gulp - Workflow automation</li>
+                <li>Git, GitHub - Version control</li>
+            </ul>
+        </section>
 
 
-    <div>
-        <h2>Website Features</h2>
-        <h3>Menu</h3>
-        <ul>
-            <li>Small screens: Accordions and carousel with a progress bar</li>
-            <li>Large screens: Menu tabs with panels</li>
-        </ul>
-
-        <h3>Reservation</h3>
-        <ul>
-            <li>Reservation form with default date and time</li>
-            <li>Initial form validation on the client side</li>
-            <li>Pop-up message to confirm booking details</li>
-        </ul>
-    </div>
+        <section>
+            <h2>Website Design</h2>
+            <ul>
+                <li>Utilized Figma to generate wireframes</li>
+                <li>Implemented layout using CSS Flexbox & Grid</li>
+                <li>Employed SCSS functions and mixins</li>
+                <li>Designed with a mobile-first approach</li>
+                <li>Achieved responsive web design with 8 breakpoints and responsive text</li>
+            </ul>
+        </section>
 
 
-    <div>
-        <h2>Quality Assurance</h2>
-        <ul>
-            <li>Achieved near-perfect scores on Google PageSpeed Insights, consistently scoring 96-100 for performance,
-                accessibility, best practices, and SEO on both mobile and desktop platforms</li>
-            <li>Website loads quickly, is accessible to people with disabilities, and is easily searchable by search
-                engines
-            </li>
-            <li>All HTML and CSS validated by W3C</li>
-        </ul>
-    </div>
+        <section>
+            <h2>Website Features</h2>
+            <h3>Menu</h3>
+            <ul>
+                <li>Small screens: Accordions and carousel with a progress bar</li>
+                <li>Large screens: Menu tabs with panels</li>
+            </ul>
+
+            <h3>Reservation</h3>
+            <ul>
+                <li>Reservation form with default date and time</li>
+                <li>Initial form validation on the client side</li>
+                <li>Pop-up message to confirm booking details</li>
+            </ul>
+            </div>
 
 
-    <div>
-        <h2>Streamlined Workflow</h2>
-        <p>Utilized Gulp and npm to:</p>
-        <ul>
-            <li>Generate development and production code</li>
-            <li>Resize and optimize images</li>
-            <li>Convert font format from TIFF to WOFF2</li>
-            <li>Use BrowserSync to update changes live</li>
-            <li>Create minified critical and non-critical CSS from SCSS files automatically</li>
-            <li>Create minified critical and non-critical scripts in legacy and modern code automatically</li>
-        </ul>
-    </div>
+            <section>
+                <h2>Quality Assurance</h2>
+                <ul>
+                    <li>Achieved near-perfect scores on Google PageSpeed Insights, consistently scoring 96-100 for
+                        performance,
+                        accessibility, best practices, and SEO on both mobile and desktop platforms</li>
+                    <li>Website loads quickly, is accessible to people with disabilities, and is easily searchable by
+                        search
+                        engines
+                    </li>
+                    <li>All HTML and CSS validated by W3C</li>
+                </ul>
+            </section>
 
+
+            <section>
+                <h2>Streamlined Workflow</h2>
+                <p>Utilized Gulp and npm to:</p>
+                <ul>
+                    <li>Generate development and production code</li>
+                    <li>Resize and optimize images</li>
+                    <li>Convert font format from TIFF to WOFF2</li>
+                    <li>Use BrowserSync to update changes live</li>
+                    <li>Create minified critical and non-critical CSS from SCSS files automatically</li>
+                    <li>Create minified critical and non-critical scripts in legacy and modern code automatically</li>
+                </ul>
+            </section>
+    </main>
 </body>
 
 <footer>
