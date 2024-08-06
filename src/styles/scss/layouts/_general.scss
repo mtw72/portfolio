@@ -3,7 +3,7 @@
 @use '../partials/functions' as f;
 
 main {
-    margin-inline: 1%;
+    margin-inline: 3%;
 
     @include min-mq (md) {
         width: f.rem($mw-sm);
@@ -23,6 +23,97 @@ main {
     }
 }
 
+ul {
+    list-style-image: url('../../src/assets/images/raw/arrow-right.png');
+    // list-style-type: disc;
+    // list-style-type: square;
+}
+
+ul li {
+    position: relative;
+    margin-left: 30px;
+    /* Adjust based on image size */
+    margin-block: f.rem(5);
+    /* Adjust as needed */
+}
+
+h1 span {
+    position: relative;
+    /* Make parent element positioned relatively */
+    padding-left: 15px;
+    /* Add padding to avoid text overlap with the image */
+}
+
+h1 span::after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    bottom: 0;
+    width: 30px;
+    /* Adjust to image width */
+    height: 30px;
+    /* Adjust to image height */
+    background-image: url('../../src/assets/images/raw/tea-leaves.png');
+    background-size: contain;
+    /* Ensure image is fully contained */
+    background-repeat: no-repeat;
+    display: inline-block;
+    /* Ensure the pseudo-element is displayed */
+}
+
+h2 span {
+    position: relative;
+    /* Make parent element positioned relatively */
+    padding-left: 15px;
+    /* Add padding to avoid text overlap with the image */
+}
+
+h2 span::after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    bottom: 2px;
+    width: 45px;
+    /* Adjust to image width */
+    height: 45px;
+    /* Adjust to image height */
+    background-image: url('../../src/assets/images/raw/leaf-64.png');
+    background-size: contain;
+    /* Ensure image is fully contained */
+    background-repeat: no-repeat;
+    display: inline-block;
+    /* Ensure the pseudo-element is displayed */
+}
+
+h3,
+.pen {
+    position: relative;
+    /* Make parent element positioned relatively */
+    padding-left: 30px;
+    /* Add padding to avoid text overlap with the image */
+}
+
+h3::before,
+.pen::before {
+    content: '';
+    position: absolute;
+    left: -5px;
+    bottom: -5px;
+    width: 40px;
+    /* Adjust to image width */
+    height: 40px;
+    /* Adjust to image height */
+    background-image: url('../../src/assets/images/raw/pen.png');
+    background-size: contain;
+    /* Ensure image is fully contained */
+    background-repeat: no-repeat;
+    display: inline-block;
+    /* Ensure the pseudo-element is displayed */
+}
+
+section {
+    margin-block: 5%;
+}
 
 footer {
     display: flex;
@@ -30,4 +121,5 @@ footer {
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding-block: f.rem(20);
 }

@@ -4,15 +4,20 @@
 @use './functions' as f;
 
 body {
+    font-size: clamp(1.1rem, 0.9rem + 1vw, 1.3rem);
     font-family: $bodyfont;
     font-weight: 400;
-    font-size: f.rem(20);
 }
 
 h1 {
+    font-size: clamp(1.3rem, 1.1rem + 3vw, 2.5rem);
     font-family: $headingfont;
     font-weight: 600;
     letter-spacing: -.1rem;
+}
+
+h2 {
+    font-size: clamp(1.3rem, 1rem + 2vw, 1.6rem);
 }
 
 h2,
@@ -20,11 +25,14 @@ h3,
 h4,
 h5,
 h6 {
+    font-weight: 600;
     letter-spacing: -.04rem;
 }
 
-// .menu__image-description {
-//     font-size: clamp(1.3rem, 0.9rem + 1vw, 1.5rem);
-//     text-shadow: 1px 1px $yellow-3;
-//     font-weight: 400;
-// }
+footer p {
+    font-size: clamp(0.9rem, 0.9rem + 1vw, 1.1rem);
+}
+
+footer a {
+    text-decoration: underline;
+}

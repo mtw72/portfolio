@@ -11,9 +11,15 @@
     // min-height: 810px;
     overflow: hidden;
 
-    /* // @include min-mq (xs) {
-    //     margin-top: f.rem(45);
-    // } */
+    @include min-mq (lg) {
+        max-width: f.rem(500);
+        height: 100%;
+    }
+}
+
+.r2-video {
+    width: f.rem(500);
+    height: 100%;
 }
 
 /* Hide the images by default */

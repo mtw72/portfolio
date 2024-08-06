@@ -21,29 +21,35 @@ h6 {
     color: #707070;
 }
 
+
 .link-button {
+    // position: absolute;
+
     display: block;
     width: f.rem(200);
-    height: f.rem(50);
+    height: f.rem(40);
+    line-height: f.rem(40); // This aligns the text vertically within the link
     background-color: #76885B;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: f.rem(16);
+    font-size: f.rem(18);
+    text-align: center;
+    margin-block: f.rem(10);
 }
 
-button a {
-    text-decoration: none;
+.link-button:hover {
+    background-color: #5a6d41;
+}
+
+hr {
+    border: 1px solid #bfccb5;
 }
 
 a {
     color: #76885B;
 }
-
-// hr {
-//     border: 1px solid $orange-1;
-// }
 
 // :focus {
 //     outline: 2px solid $orange-2;
@@ -75,7 +81,7 @@ a {
 
 .current-container,
 .carousel__progress-bar {
-    background-color: rgb(191, 204, 181);
+    background-color: #bfccb5;
 }
 
 .carousel__progress-list:focus,
