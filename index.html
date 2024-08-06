@@ -1,50 +1,58 @@
 <!DOCTYPE html>
 <html lang="en-gb" dir="ltr">
 
-<title>Portfolio | R2 Place</title>
+<head>
+    <title>Portfolio | R2 Place</title>
 
-<meta charset="utf-8">
-<meta http-equiv="x-ua-compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="theme-color" content="rgb(191, 204, 181)">
-<meta name='robots' content='max-image-preview:large'>
-<meta name="keywords"
-    content="Portfolio, restaurant website, automate workflow, excellent marks in Google PageSpeed Insights">
-<meta name="description" content="Portfolio showcasing a virtual restaurant website">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image:alt" content="Portfolio | R2 Place">
-<!-- <meta name="twitter:image" content="https://mtw72.github.io/R2place/dist/assets/images/twitter-image.jpeg"> -->
+    <meta name="theme-color" content="rgb(191, 204, 181)">
+    <meta name='robots' content='max-image-preview:large'>
+    <meta name="keywords"
+        content="Portfolio, restaurant website, automate workflow, excellent marks in Google PageSpeed Insights">
+    <meta name="description" content="Portfolio showcasing a virtual restaurant website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image:alt" content="Portfolio | R2 Place">
+    <!-- <meta name="twitter:image" content="https://mtw72.github.io/R2place/dist/assets/images/twitter-image.jpeg"> -->
 
-<meta property="og:url" content="https://mtw72.github.io/R2-revising/">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Portfolio | R2 Place">
-<meta property="og:description" content="Portfolio showcasing a virtual restaurant website">
-<meta property="og:locale" content="en_GB">
-<!-- <meta property="og:image:secure_url" content="https://mtw72.github.io/R2place/dist/assets/images/og-image.jpeg"> -->
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://mtw72.github.io/R2-revising/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Portfolio | R2 Place">
+    <meta property="og:description" content="Portfolio showcasing a virtual restaurant website">
+    <meta property="og:locale" content="en_GB">
+    <!-- <meta property="og:image:secure_url" content="https://mtw72.github.io/R2place/dist/assets/images/og-image.jpeg"> -->
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
 
-<link rel="icon" type="image/x-icon" href="./dist/assets/images/R2.png">
-<link rel="canonical" href="https://mtw72.github.io/R2place/">
+    <link rel="icon" type="image/x-icon" href="./dist/assets/images/R2.png">
+    <link rel="canonical" href="https://mtw72.github.io/R2place/">
 
-<!-- Critical resources -->
-<!-- Google fonts -->
-<link rel="stylesheet" href="./dist/styles/googlefont.min.css">
-<!-- Loader -->
-<link rel="stylesheet" href="./dist/styles/loader.min.css">
-<!-- <script src="./dist/scripts/critical-modern-script.min.js"></script> -->
+    <!-- Critical resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Rancho&display=swap"
+        rel="stylesheet">
+    <!-- Google fonts -->
+    <link rel="stylesheet" href="./dist/styles/googlefont.min.css">
+    <!-- Loader -->
+    <link rel="stylesheet" href="./dist/styles/loader.min.css">
+    <!-- <script src="./dist/scripts/critical-modern-script.min.js"></script> -->
 
-<!-- Non-critical resources -->
-<link rel="preload" href="./dist/styles/r2place-main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <!-- Non-critical resources -->
+    <link rel="preload" href="./dist/styles/r2place-main.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
 
-<script defer src="./dist/scripts/non-critical-modern-script.js"></script>
-<script nomodule defer src="./dist/scripts/non-critical-legacy-script.js"></script>
+    <script defer src="./dist/scripts/non-critical-modern-script.js"></script>
+    <script nomodule defer src="./dist/scripts/non-critical-legacy-script.js"></script>
 
-<!-- No script -->
-<noscript>
-    <link rel="stylesheet" href="./dist/styles/noscript.min.css">
-</noscript>
+    <!-- No script -->
+    <noscript>
+        <link rel="stylesheet" href="./dist/styles/noscript.min.css">
+    </noscript>
+</head>
 
 <body>
     <main>
@@ -53,7 +61,7 @@
             <!-- <a href="https://www.flaticon.com/free-icons/tea-leaf" title="tea leaf icons">Tea leaf icons created by Kalashnyk - Flaticon</a> -->
             <p>A virtual restaurant website with visually appealing, interactive and user-friendly features.</p>
             <a class="link-button" href="https://mtw72.github.io/R2place/" target="_blank">
-                Link to Live Website
+                Visit Website
             </a>
         </section>
 
@@ -74,16 +82,17 @@
                     <div class="carousel__image-description">Result of Google PageSpeed Insights</div>
                 </div>
 
+                <!-- video with caption text -->
                 <div class="carousel__slide" role="tabpanel" aria-roledescription="slide">
-                    <!-- <video width="810" height="940" controls> -->
-                    <video class="r2-video" src="./src/assets/images/raw/r2-run-gulp.mp4" type="video/mp4" controls>
+                    <video class="carousel__video" src="./src/assets/images/raw/r2-run-gulp.mp4" type="video/mp4"
+                        controls>
                         Your browser does not support the video tag.
                     </video>
                     <div class="carousel__image-description">Using Gulp to automate workflow</div>
                 </div>
             </div>
 
-            <!-- <div class="carousel__cover"></div> -->
+            <div class="carousel__cover"></div>
 
             <!-- Next and previous buttons -->
             <button class="carousel__prev-button carousel__transition-button" type="button"
@@ -147,9 +156,9 @@
         <section>
             <h2>Website Design <span></span></h2>
             <ul>
-                <li>Utilized Figma to generate wireframes</li>
-                <li>Implemented layout using CSS Flexbox & Grid</li>
-                <li>Employed SCSS functions and mixins</li>
+                <li>Utilized Figma to generate <b>wireframes</b></li>
+                <li>Implemented layout using <b>CSS Flexbox</b> & <b>Grid</b></li>
+                <li>Employed <b>SCSS functions</b> and <b>mixins</b></li>
                 <li>Designed with a <b>mobile-first approach</b> </li>
                 <li>Achieved <b>responsive web design</b> with 8 breakpoints and responsive text</li>
             </ul>
@@ -159,16 +168,16 @@
         <section>
             <h2>Website Features <span></span></h2>
             <!-- <a href="https://www.flaticon.com/free-icons/feature" title="feature icons">Feature icons created by kerismaker - Flaticon</a> -->
-            <h3>Menu</h3>
+            <h3 class="pen">Menu</h3>
             <ul>
-                <li>Small screens: Accordions and carousel with a progress bar</li>
-                <li>Large screens: Menu tabs with panels</li>
+                <li>Small screens: <b>Accordions</b> and <b>carousel</b> with a progress bar</li>
+                <li>Large screens: Menu <b>tabs</b> with panels</li>
             </ul>
-            <h3>Reservation</h3>
+            <h3 class="pen">Reservation</h3>
             <ul>
                 <li>Reservation form with <b>default values</b> (date and time)</li>
-                <li>Initial form validation on the client side</li>
-                <li>Pop-up message to confirm booking details</li>
+                <li>Initial <b>form validation</b> on the client side</li>
+                <li><b>Pop-up message</b> to confirm booking details</li>
             </ul>
         </section>
 
@@ -176,7 +185,8 @@
         <section>
             <h2>Quality Assurance <span></span></h2>
             <ul>
-                <li>Achieved near-perfect scores on Google PageSpeed Insights, consistently scoring 96-100 for
+                <li>Achieved <b>near-perfect scores</b> on <b>Google PageSpeed Insights</b>, consistently scoring 96-100
+                    for
                     performance,
                     accessibility, best practices, and SEO on both mobile and desktop platforms</li>
                 <li>Website loads quickly, is accessible to people with disabilities, and is easily searchable by
@@ -184,7 +194,7 @@
                     engines
                 </li>
                 <li>All HTML and CSS validated by W3C</li>
-                <li>Cross-browser compatible ensuring consistent performance and appearance across various web
+                <li><b>Cross-browser compatible</b> ensuring consistent performance and appearance across various web
                     browsers</li>
             </ul>
         </section>

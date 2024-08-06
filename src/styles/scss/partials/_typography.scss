@@ -3,21 +3,14 @@
 @use './fonts' as *;
 @use './functions' as f;
 
-body {
-    font-size: clamp(1.1rem, 0.9rem + 1vw, 1.3rem);
-    font-family: $bodyfont;
-    font-weight: 400;
-}
-
-h1 {
-    font-size: clamp(1.3rem, 1.1rem + 3vw, 2.5rem);
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: $headingfont;
     font-weight: 600;
-    letter-spacing: -.1rem;
-}
-
-h2 {
-    font-size: clamp(1.3rem, 1rem + 2vw, 1.6rem);
 }
 
 h2,
@@ -25,8 +18,22 @@ h3,
 h4,
 h5,
 h6 {
-    font-weight: 600;
-    letter-spacing: -.04rem;
+    letter-spacing: -.08rem;
+}
+
+h1 {
+    font-size: clamp(1.3rem, 1.1rem + 3vw, 2.5rem);
+    letter-spacing: -.1rem;
+}
+
+h2 {
+    font-size: clamp(1.3rem, 1rem + 2vw, 2rem);
+}
+
+body {
+    font-size: clamp(1.1rem, 0.9rem + 1vw, 1.3rem);
+    font-family: $bodyfont;
+    font-weight: 400;
 }
 
 footer p {

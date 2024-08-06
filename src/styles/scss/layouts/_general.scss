@@ -5,21 +5,28 @@
 main {
     margin-inline: 3%;
 
-    @include min-mq (md) {
-        width: f.rem($mw-sm);
-        margin-inline: auto;
+    @include min-mq (xs) {
+        margin-inline: 4%
     }
 
-    @include min-mq (lg) {
-        width: f.rem($mw-md);
+    @include min-mq (sm) {
+        // width: f.rem($mw-xs);
+        // margin-inline: auto;
+        margin-inline: 5%
     }
+
+    @include min-mq (md) {
+        //     width: f.rem($mw-sm);
+        margin-inline: 6%;
+    }
+
+    // @include min-mq (lg) {
+    //     width: f.rem($mw-md);
+    // }
 
     @include min-mq (xl) {
         width: f.rem($mw-lg);
-    }
-
-    @include min-mq (xxl) {
-        width: f.rem($mw-xl);
+        margin-inline: auto;
     }
 }
 
@@ -49,10 +56,8 @@ h1 span::after {
     position: absolute;
     left: 5px;
     bottom: 0;
-    width: 30px;
-    /* Adjust to image width */
-    height: 30px;
-    /* Adjust to image height */
+    width: 25px;
+    height: 25px;
     background-image: url('../../src/assets/images/raw/tea-leaves.png');
     background-size: contain;
     /* Ensure image is fully contained */
@@ -62,30 +67,33 @@ h1 span::after {
 }
 
 h2 span {
-    position: relative;
-    /* Make parent element positioned relatively */
-    padding-left: 15px;
-    /* Add padding to avoid text overlap with the image */
+    @include min-mq (xxs) {
+        position: relative;
+        /* Make parent element positioned relatively */
+        padding-left: 15px;
+        /* Add padding to avoid text overlap with the image */
+    }
 }
 
 h2 span::after {
-    content: '';
-    position: absolute;
-    left: 5px;
-    bottom: 2px;
-    width: 45px;
-    /* Adjust to image width */
-    height: 45px;
-    /* Adjust to image height */
-    background-image: url('../../src/assets/images/raw/leaf-64.png');
-    background-size: contain;
-    /* Ensure image is fully contained */
-    background-repeat: no-repeat;
-    display: inline-block;
-    /* Ensure the pseudo-element is displayed */
+    @include min-mq (xxs) {
+        content: '';
+        position: absolute;
+        left: 5px;
+        bottom: 2px;
+        width: 45px;
+        /* Adjust to image width */
+        height: 45px;
+        /* Adjust to image height */
+        background-image: url('../../src/assets/images/raw/leaf-64.png');
+        background-size: contain;
+        /* Ensure image is fully contained */
+        background-repeat: no-repeat;
+        display: inline-block;
+        /* Ensure the pseudo-element is displayed */
+    }
 }
 
-h3,
 .pen {
     position: relative;
     /* Make parent element positioned relatively */
@@ -93,12 +101,11 @@ h3,
     /* Add padding to avoid text overlap with the image */
 }
 
-h3::before,
 .pen::before {
     content: '';
     position: absolute;
     left: -5px;
-    bottom: -5px;
+    bottom: -4px;
     width: 40px;
     /* Adjust to image width */
     height: 40px;
@@ -113,6 +120,13 @@ h3::before,
 
 section {
     margin-block: 5%;
+}
+
+video {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
 }
 
 footer {
