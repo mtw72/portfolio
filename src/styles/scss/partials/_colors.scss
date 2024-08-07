@@ -29,6 +29,8 @@ h6 {
 
 .link-button:hover {
     background-color: #5a6d41;
+    box-shadow: 1px 1px 2px grey;
+    color: white;
 }
 
 hr {
@@ -36,7 +38,11 @@ hr {
 }
 
 a {
-    color: #76885B;
+    color: #5a6d41;
+
+    &:hover {
+        color: #76885B;
+    }
 }
 
 // :focus {

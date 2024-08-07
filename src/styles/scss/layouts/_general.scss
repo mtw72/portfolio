@@ -10,19 +10,12 @@ main {
     }
 
     @include min-mq (sm) {
-        // width: f.rem($mw-xs);
-        // margin-inline: auto;
         margin-inline: 5%
     }
 
     @include min-mq (md) {
-        //     width: f.rem($mw-sm);
         margin-inline: 6%;
     }
-
-    // @include min-mq (lg) {
-    //     width: f.rem($mw-md);
-    // }
 
     @include min-mq (xl) {
         width: f.rem($mw-lg);
@@ -31,14 +24,59 @@ main {
 }
 
 section {
-    margin-block: 5%;
+    margin-block: 8%;
+
+    @include min-mq (sm) {
+        margin-block: 6.5%;
+    }
+
+    @include min-mq (md) {
+        margin-block: 6%;
+    }
+
+    @include min-mq (lg) {
+        margin-block: 5.5%;
+    }
+
+    @include min-mq (xl) {
+        margin-block: 5%;
+    }
+}
+
+section:last-child {
+    margin-bottom: 12%;
+
+    @include min-mq (sm) {
+        margin-bottom: 10%;
+    }
+
+    @include min-mq (md) {
+        margin-bottom: 9%;
+    }
+
+    @include min-mq (lg) {
+        margin-bottom: 8%;
+    }
+
+    @include min-mq (xl) {
+        margin-bottom: 7%;
+    }
 }
 
 footer {
+    margin-inline: 3%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     padding-block: f.rem(20);
+
+    @include min-mq (md) {
+        padding-block: f.rem(30);
+    }
+
+    @include min-mq (lg) {
+        padding-block: f.rem(40);
+    }
 }

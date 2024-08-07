@@ -65,77 +65,79 @@
             </a>
         </section>
 
-        <div class="carousel" aria-roledescription="carousel">
-            <div id="carousel__track" aria-live="off">
-                <!-- images with caption text -->
-                <div class="carousel__slide" role="tabpanel" aria-roledescription="slide">
-                    <img class="carousel__image" src="./src/assets/images/raw/wireframe-iPad.jpg"
-                        onerror="this.onerror=null; this.src='./src/assets/images/raw/wireframe-iPad.jpg';"
-                        alt="Wireframing by Figma">
-                    <div class="carousel__image-description">Wireframing by Figma</div>
+        <section>
+            <div class="carousel" aria-roledescription="carousel">
+                <div id="carousel__track" aria-live="off">
+                    <!-- images with caption text -->
+                    <div class="carousel__slide" role="tabpanel" aria-roledescription="slide">
+                        <img class="carousel__image" src="./src/assets/images/raw/wireframe-iPad.jpg"
+                            onerror="this.onerror=null; this.src='./src/assets/images/raw/wireframe-iPad.jpg';"
+                            alt="Wireframing by Figma">
+                        <div class="carousel__image-description">Wireframing by Figma</div>
+                    </div>
+
+                    <div class="carousel__slide" role="tabpanel" aria-roledescription="slide">
+                        <img class="carousel__image" src="./src/assets/images/raw/r2-googletest.jpg"
+                            onerror="this.onerror=null; this.src='./images/satay-chicken-skewers.jpeg';"
+                            alt="Result of Google PageSpeed Insights" loading="lazy">
+                        <div class="carousel__image-description">Result of Google PageSpeed Insights</div>
+                    </div>
+
+                    <!-- video with caption text -->
+                    <div class="carousel__slide" role="tabpanel" aria-roledescription="slide">
+                        <video class="carousel__video" src="./src/assets/images/raw/r2-run-gulp.mp4" type="video/mp4"
+                            controls>
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="carousel__image-description">Using Gulp to automate workflow</div>
+                    </div>
                 </div>
 
-                <div class="carousel__slide" role="tabpanel" aria-roledescription="slide">
-                    <img class="carousel__image" src="./src/assets/images/raw/r2-googletest.jpg"
-                        onerror="this.onerror=null; this.src='./images/satay-chicken-skewers.jpeg';"
-                        alt="Result of Google PageSpeed Insights" loading="lazy">
-                    <div class="carousel__image-description">Result of Google PageSpeed Insights</div>
-                </div>
+                <div class="carousel__cover"></div>
 
-                <!-- video with caption text -->
-                <div class="carousel__slide" role="tabpanel" aria-roledescription="slide">
-                    <video class="carousel__video" src="./src/assets/images/raw/r2-run-gulp.mp4" type="video/mp4"
-                        controls>
-                        Your browser does not support the video tag.
-                    </video>
-                    <div class="carousel__image-description">Using Gulp to automate workflow</div>
+                <!-- Next and previous buttons -->
+                <button class="carousel__prev-button carousel__transition-button" type="button"
+                    aria-label="Go to the previous slide" aria-controls="carousel__track">&#10094;</button>
+                <button class="carousel__next-button carousel__transition-button" type="button"
+                    aria-label="Go to the next slide" aria-controls="carousel__track">&#10095;</button>
+
+                <div class="carousel__bottom-control">
+                    <!-- Play and pause buttons -->
+                    <button class="carousel__pause-button" type="button" aria-label="Stop Automatic Slide Show"
+                        aria-hidden="false">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M6 2.8C5.33726 2.8 4.8 3.33726 4.8 4V20C4.8 20.6627 5.33726 21.2 6 21.2H10C10.6627 21.2 11.2 20.6627 11.2 20V4C11.2 3.33726 10.6627 2.8 10 2.8H6ZM7.2 18.8V5.2H8.8V18.8H7.2ZM14 2.8C13.3373 2.8 12.8 3.33726 12.8 4V20C12.8 20.6627 13.3373 21.2 14 21.2H18C18.6627 21.2 19.2 20.6627 19.2 20V4C19.2 3.33726 18.6627 2.8 18 2.8H14ZM15.2 18.8V5.2H16.8V18.8H15.2Z"
+                                fill="#76885B" stroke="#76885B" stroke-width="0.4" stroke-linecap="round"
+                                stroke-linejoin="round">
+                            </path>
+                        </svg>
+                    </button>
+                    <button class="carousel__play-button hidden" type="button" aria-label="Start Automatic Slide Show"
+                        aria-hidden="true">
+                        <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M5.64891 1.99059C5.27966 1.75321 4.81026 1.7364 4.42497 1.94675C4.03969 2.15709 3.8 2.56103 3.8 3V21C3.8 21.439 4.03969 21.8429 4.42497 22.0533C4.81026 22.2636 5.27966 22.2468 5.64891 22.0094L19.6489 13.0094C19.9924 12.7886 20.2 12.4083 20.2 12C20.2 11.5917 19.9924 11.2114 19.6489 10.9906L5.64891 1.99059ZM6.2 5.198L16.7809 12L6.2 18.802V5.198Z"
+                                fill="#76885B" stroke="#76885B" stroke-width="0.4" stroke-linecap="round"
+                                stroke-linejoin="round">
+                            </path>
+                        </svg>
+                    </button>
+
+                    <div class="carousel__progress-list" role="tablist" aria-label="Slides" tabindex="0">
+                        <div class="carousel__progress-container carousel__transition-button">
+                            <button class="carousel__progress-bar" type="button" role="tab" id="bar1"></button>
+                        </div>
+                        <div class="carousel__progress-container carousel__transition-button">
+                            <button class="carousel__progress-bar" type="button" role="tab" id="bar2"></button>
+                        </div>
+                        <div class="carousel__progress-container carousel__transition-button">
+                            <button class="carousel__progress-bar" type="button" role="tab" id="bar3"></button>
+                        </div>
+                    </div>
                 </div>
             </div>
-
-            <div class="carousel__cover"></div>
-
-            <!-- Next and previous buttons -->
-            <button class="carousel__prev-button carousel__transition-button" type="button"
-                aria-label="Go to the previous slide" aria-controls="carousel__track">&#10094;</button>
-            <button class="carousel__next-button carousel__transition-button" type="button"
-                aria-label="Go to the next slide" aria-controls="carousel__track">&#10095;</button>
-
-            <div class="carousel__bottom-control">
-                <!-- Play and pause buttons -->
-                <button class="carousel__pause-button" type="button" aria-label="Stop Automatic Slide Show"
-                    aria-hidden="false">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M6 2.8C5.33726 2.8 4.8 3.33726 4.8 4V20C4.8 20.6627 5.33726 21.2 6 21.2H10C10.6627 21.2 11.2 20.6627 11.2 20V4C11.2 3.33726 10.6627 2.8 10 2.8H6ZM7.2 18.8V5.2H8.8V18.8H7.2ZM14 2.8C13.3373 2.8 12.8 3.33726 12.8 4V20C12.8 20.6627 13.3373 21.2 14 21.2H18C18.6627 21.2 19.2 20.6627 19.2 20V4C19.2 3.33726 18.6627 2.8 18 2.8H14ZM15.2 18.8V5.2H16.8V18.8H15.2Z"
-                            fill="#76885B" stroke="#76885B" stroke-width="0.4" stroke-linecap="round"
-                            stroke-linejoin="round">
-                        </path>
-                    </svg>
-                </button>
-                <button class="carousel__play-button hidden" type="button" aria-label="Start Automatic Slide Show"
-                    aria-hidden="true">
-                    <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M5.64891 1.99059C5.27966 1.75321 4.81026 1.7364 4.42497 1.94675C4.03969 2.15709 3.8 2.56103 3.8 3V21C3.8 21.439 4.03969 21.8429 4.42497 22.0533C4.81026 22.2636 5.27966 22.2468 5.64891 22.0094L19.6489 13.0094C19.9924 12.7886 20.2 12.4083 20.2 12C20.2 11.5917 19.9924 11.2114 19.6489 10.9906L5.64891 1.99059ZM6.2 5.198L16.7809 12L6.2 18.802V5.198Z"
-                            fill="#76885B" stroke="#76885B" stroke-width="0.4" stroke-linecap="round"
-                            stroke-linejoin="round">
-                        </path>
-                    </svg>
-                </button>
-
-                <div class="carousel__progress-list" role="tablist" aria-label="Slides" tabindex="0">
-                    <div class="carousel__progress-container carousel__transition-button">
-                        <button class="carousel__progress-bar" type="button" role="tab" id="bar1"></button>
-                    </div>
-                    <div class="carousel__progress-container carousel__transition-button">
-                        <button class="carousel__progress-bar" type="button" role="tab" id="bar2"></button>
-                    </div>
-                    <div class="carousel__progress-container carousel__transition-button">
-                        <button class="carousel__progress-bar" type="button" role="tab" id="bar3"></button>
-                    </div>
-                </div>
-            </div>
-        </div>
+        </section>
 
         <section>
             <!-- <a href="https://www.flaticon.com/free-icons/leaves" title="leaves icons">Leaves icons created by Xinh

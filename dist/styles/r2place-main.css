@@ -496,6 +496,9 @@ h6 {
 
 .link-button:hover {
   background-color: #5a6d41;
+  -webkit-box-shadow: 1px 1px 2px grey;
+          box-shadow: 1px 1px 2px grey;
+  color: white;
 }
 
 hr {
@@ -503,6 +506,9 @@ hr {
 }
 
 a {
+  color: #5a6d41;
+}
+a:hover {
   color: #76885B;
 }
 
@@ -560,7 +566,7 @@ h1 {
 }
 
 h2 {
-  font-size: clamp(1.3rem, 1rem + 2vw, 2rem);
+  font-size: clamp(1.3rem, 1.1rem + 2vw, 2rem);
 }
 
 h3 {
@@ -575,35 +581,23 @@ body {
 
 .link-button {
   font-family: "MontSerrat", Tahoma, Arial, sans-serif;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  position: relative;
   text-align: center;
-}
-.link-button::after {
-  content: ">>";
-  position: absolute;
-  right: 15%;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  opacity: 0;
+  font-size: 1.125rem;
 }
 .link-button:hover {
   font-weight: 600;
   text-align: left;
-  padding-left: 1.875rem;
-}
-.link-button:hover::after {
-  right: 0.9375rem;
-  opacity: 1;
 }
 
 footer p {
-  font-size: clamp(0.9rem, 0.9rem + 1vw, 1.1rem);
+  font-size: clamp(0.9rem, 0.75rem + 1vw, 1.1rem);
 }
 
 footer a {
   text-decoration: underline;
+}
+footer a:hover {
+  font-weight: 600;
 }
 
 .skip-link:focus {
@@ -663,14 +657,28 @@ h3.pen::before {
   width: 12.5rem;
   height: 2.5rem;
   line-height: 2.5rem;
-  background-color: #76885B;
-  color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 1.125rem;
-  text-align: center;
   margin-block: 0.625rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  position: relative;
+}
+.link-button::after {
+  content: ">>";
+  position: absolute;
+  right: 10%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  opacity: 0;
+}
+.link-button:hover {
+  padding-left: 1.875rem;
+}
+.link-button:hover::after {
+  right: 0.9375rem;
+  opacity: 1;
 }
 
 /* Slideshow container */
@@ -905,10 +913,55 @@ main {
 }
 
 section {
-  margin-block: 5%;
+  margin-block: 8%;
+}
+@media all and (min-width: 36em) {
+  section {
+    margin-block: 6.5%;
+  }
+}
+@media all and (min-width: 48em) {
+  section {
+    margin-block: 6%;
+  }
+}
+@media all and (min-width: 62em) {
+  section {
+    margin-block: 5.5%;
+  }
+}
+@media all and (min-width: 76.25em) {
+  section {
+    margin-block: 5%;
+  }
+}
+
+section:last-child {
+  margin-bottom: 12%;
+}
+@media all and (min-width: 36em) {
+  section:last-child {
+    margin-bottom: 10%;
+  }
+}
+@media all and (min-width: 48em) {
+  section:last-child {
+    margin-bottom: 9%;
+  }
+}
+@media all and (min-width: 62em) {
+  section:last-child {
+    margin-bottom: 8%;
+  }
+}
+@media all and (min-width: 76.25em) {
+  section:last-child {
+    margin-bottom: 7%;
+  }
 }
 
 footer {
+  margin-inline: 3%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -924,5 +977,15 @@ footer {
           align-items: center;
   text-align: center;
   padding-block: 1.25rem;
+}
+@media all and (min-width: 48em) {
+  footer {
+    padding-block: 1.875rem;
+  }
+}
+@media all and (min-width: 62em) {
+  footer {
+    padding-block: 2.5rem;
+  }
 }
 /*# sourceMappingURL=r2place-main.css.map */
