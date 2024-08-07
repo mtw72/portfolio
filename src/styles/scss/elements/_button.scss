@@ -1,0 +1,17 @@
+@use '../partials/mixins' as *;
+@use '../partials/functions' as f;
+
+.link-button {
+    display: block;
+    width: f.rem(200);
+    height: f.rem(40);
+    line-height: f.rem(40); // This aligns the text vertically within the link
+    background-color: #76885B;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: f.rem(18);
+    text-align: center;
+    margin-block: f.rem(10);
+}

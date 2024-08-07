@@ -1,0 +1,84 @@
+@use '../partials/mixins' as *;
+@use '../partials/functions' as f;
+
+ul {
+    list-style-image: url('../../src/assets/images/raw/arrow-right.png');
+}
+
+ul li {
+    position: relative;
+    margin-left: 30px;
+    margin-block: f.rem(5);
+}
+
+.pen {
+    position: relative;
+    padding-left: 30px;
+}
+
+.pen::before {
+    content: '';
+    position: absolute;
+    left: -5px;
+    bottom: -5px;
+    width: 40px;
+    height: 40px;
+    background-image: url('../../src/assets/images/raw/pen.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+
+h3.pen::before {
+    bottom: -2px;
+}
+
+// h1 span {
+//     position: relative;
+//     /* Make parent element positioned relatively */
+//     padding-left: 15px;
+//     /* Add padding to avoid text overlap with the image */
+// }
+
+// h1 span::after {
+//     content: '';
+//     position: absolute;
+//     left: 5px;
+//     bottom: 0;
+//     width: 25px;
+//     height: 25px;
+//     // background-image: url('../../src/assets/images/raw/tea-leaves.png');
+//     background-size: contain;
+//     /* Ensure image is fully contained */
+//     background-repeat: no-repeat;
+//     display: inline-block;
+//     /* Ensure the pseudo-element is displayed */
+// }
+
+// h2 span {
+//     @include min-mq (xxs) {
+//         position: relative;
+//         /* Make parent element positioned relatively */
+//         padding-left: 15px;
+//         /* Add padding to avoid text overlap with the image */
+//     }
+// }
+
+// h2 span::after {
+//     @include min-mq (xxs) {
+//         content: '';
+//         position: absolute;
+//         left: 5px;
+//         bottom: 2px;
+//         width: 45px;
+//         /* Adjust to image width */
+//         height: 45px;
+//         /* Adjust to image height */
+//         background-image: url('../../src/assets/images/raw/leaf-64.png');
+//         background-size: contain;
+//         /* Ensure image is fully contained */
+//         background-repeat: no-repeat;
+//         display: inline-block;
+//         /* Ensure the pseudo-element is displayed */
+//     }
+// }

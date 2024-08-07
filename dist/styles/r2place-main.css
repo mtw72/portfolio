@@ -490,18 +490,8 @@ h6 {
 }
 
 .link-button {
-  display: block;
-  width: 12.5rem;
-  height: 2.5rem;
-  line-height: 2.5rem;
   background-color: #76885B;
   color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1.125rem;
-  text-align: center;
-  margin-block: 0.625rem;
 }
 
 .link-button:hover {
@@ -565,7 +555,7 @@ h6 {
 }
 
 h1 {
-  font-size: clamp(1.3rem, 1.1rem + 3vw, 2.5rem);
+  font-size: clamp(1.5rem, 1.1rem + 3vw, 2.5rem);
   letter-spacing: -0.1rem;
 }
 
@@ -573,10 +563,39 @@ h2 {
   font-size: clamp(1.3rem, 1rem + 2vw, 2rem);
 }
 
+h3 {
+  font-size: clamp(1.2rem, 1rem + 2vw, 1.5rem);
+}
+
 body {
   font-size: clamp(1.1rem, 0.9rem + 1vw, 1.3rem);
   font-family: "Lato", Helvetica, Arial, sans-serif;
   font-weight: 400;
+}
+
+.link-button {
+  font-family: "MontSerrat", Tahoma, Arial, sans-serif;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  position: relative;
+  text-align: center;
+}
+.link-button::after {
+  content: ">>";
+  position: absolute;
+  right: 15%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  opacity: 0;
+}
+.link-button:hover {
+  font-weight: 600;
+  text-align: left;
+  padding-left: 1.875rem;
+}
+.link-button:hover::after {
+  right: 0.9375rem;
+  opacity: 1;
 }
 
 footer p {
@@ -605,6 +624,53 @@ footer a {
 
 .confirmation-message__container {
   z-index: 400;
+}
+
+ul {
+  list-style-image: url("../../src/assets/images/raw/arrow-right.png");
+}
+
+ul li {
+  position: relative;
+  margin-left: 30px;
+  margin-block: 0.3125rem;
+}
+
+.pen {
+  position: relative;
+  padding-left: 30px;
+}
+
+.pen::before {
+  content: "";
+  position: absolute;
+  left: -5px;
+  bottom: -5px;
+  width: 40px;
+  height: 40px;
+  background-image: url("../../src/assets/images/raw/pen.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+h3.pen::before {
+  bottom: -2px;
+}
+
+.link-button {
+  display: block;
+  width: 12.5rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  background-color: #76885B;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.125rem;
+  text-align: center;
+  margin-block: 0.625rem;
 }
 
 /* Slideshow container */
@@ -838,101 +904,8 @@ main {
   }
 }
 
-ul {
-  list-style-image: url("../../src/assets/images/raw/arrow-right.png");
-}
-
-ul li {
-  position: relative;
-  margin-left: 30px;
-  /* Adjust based on image size */
-  margin-block: 0.3125rem;
-  /* Adjust as needed */
-}
-
-h1 span {
-  position: relative;
-  /* Make parent element positioned relatively */
-  padding-left: 15px;
-  /* Add padding to avoid text overlap with the image */
-}
-
-h1 span::after {
-  content: "";
-  position: absolute;
-  left: 5px;
-  bottom: 0;
-  width: 25px;
-  height: 25px;
-  background-image: url("../../src/assets/images/raw/tea-leaves.png");
-  background-size: contain;
-  /* Ensure image is fully contained */
-  background-repeat: no-repeat;
-  display: inline-block;
-  /* Ensure the pseudo-element is displayed */
-}
-
-@media all and (min-width: 16.875em) {
-  h2 span {
-    position: relative;
-    /* Make parent element positioned relatively */
-    padding-left: 15px;
-    /* Add padding to avoid text overlap with the image */
-  }
-}
-
-@media all and (min-width: 16.875em) {
-  h2 span::after {
-    content: "";
-    position: absolute;
-    left: 5px;
-    bottom: 2px;
-    width: 45px;
-    /* Adjust to image width */
-    height: 45px;
-    /* Adjust to image height */
-    background-image: url("../../src/assets/images/raw/leaf-64.png");
-    background-size: contain;
-    /* Ensure image is fully contained */
-    background-repeat: no-repeat;
-    display: inline-block;
-    /* Ensure the pseudo-element is displayed */
-  }
-}
-
-.pen {
-  position: relative;
-  /* Make parent element positioned relatively */
-  padding-left: 30px;
-  /* Add padding to avoid text overlap with the image */
-}
-
-.pen::before {
-  content: "";
-  position: absolute;
-  left: -5px;
-  bottom: -4px;
-  width: 40px;
-  /* Adjust to image width */
-  height: 40px;
-  /* Adjust to image height */
-  background-image: url("../../src/assets/images/raw/pen.png");
-  background-size: contain;
-  /* Ensure image is fully contained */
-  background-repeat: no-repeat;
-  display: inline-block;
-  /* Ensure the pseudo-element is displayed */
-}
-
 section {
   margin-block: 5%;
-}
-
-video {
-  margin: 0;
-  padding: 0;
-  border: none;
-  outline: none;
 }
 
 footer {
