@@ -2,7 +2,7 @@
 
 
 body {
-    background-color: $white-1;
+    background-color: $white-2;
     color: $green-5;
 }
 
@@ -60,7 +60,8 @@ a {
 }
 
 .carousel__cover {
-    background: $white-2;
+    background-color: $white-2;
+    background-color: red;
 }
 
 .carousel__progress-container {

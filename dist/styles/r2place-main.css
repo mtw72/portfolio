@@ -529,7 +529,7 @@ footer a:hover {
 }
 
 body {
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(245, 247, 248);
   color: rgb(48, 77, 48);
 }
 
@@ -584,7 +584,8 @@ a:hover {
 }
 
 .carousel__cover {
-  background: rgb(245, 247, 248);
+  background-color: rgb(245, 247, 248);
+  background-color: red;
 }
 
 .carousel__progress-container {
@@ -744,8 +745,23 @@ h3.pen::before {
   top: 0;
   left: 0;
   width: 500px;
-  height: 630px;
-  z-index: 4;
+  height: 345px;
+  height: 355px;
+  height: 365px;
+  height: 378px;
+  height: 388px;
+  height: 398px;
+  height: clamp(345px, 1.06 * (100vw - 250px) + 345px, 398px);
+}
+@media all and (min-width: 18.75em) {
+  .carousel__cover {
+    height: clamp(380px, 380px + 30vw, 450px);
+  }
+}
+@media all and (min-width: 36em) {
+  .carousel__cover {
+    height: 630px;
+  }
 }
 
 .carousel__image,
@@ -760,12 +776,26 @@ h3.pen::before {
 /* // carousel text */
 .carousel__image-description {
   margin-inline: auto;
-  padding-block: 0.375rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
   max-width: 500px;
-  height: 45px;
+  height: 4.375rem;
   text-align: center;
   border-radius: 0 0 5px 5px;
+}
+@media all and (min-width: 18.75em) {
+  .carousel__image-description {
+    max-height: 2.8125rem;
+    padding-block: 0.375rem;
+  }
 }
 
 /* //Next & previous buttons */
@@ -785,7 +815,7 @@ h3.pen::before {
           user-select: none;
   border: 0;
   background-color: transparent;
-  z-index: 163;
+  z-index: 50;
 }
 
 .carousel__prev-button {
@@ -796,27 +826,9 @@ h3.pen::before {
   right: -4px;
 }
 
-/* // @include min-mq (xs) {
-
-//     .carousel__prev-button,
-//     .carousel__next-button {
-//         top: 42%;
-//         font-size: 1.25rem;
-//         transition: 0.6s ease;
-//         padding: 1rem;
-//     }
-
-//     .carousel__prev-button {
-//         left: -30px;
-//     }
-
-//     .carousel__next-button {
-//         right: -30px;
-//     }
-// } */
 /* The dots indicators */
 .carousel__bottom-control {
-  margin-top: 630px;
+  margin-top: 146%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -830,7 +842,22 @@ h3.pen::before {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  z-index: 163;
+  z-index: 50;
+}
+@media all and (min-width: 18.75em) {
+  .carousel__bottom-control {
+    margin-top: 131.5%;
+  }
+}
+@media all and (min-width: 28.125em) {
+  .carousel__bottom-control {
+    margin-top: 128%;
+  }
+}
+@media all and (min-width: 36em) {
+  .carousel__bottom-control {
+    margin-top: 630px;
+  }
 }
 
 .carousel__progress-list {
