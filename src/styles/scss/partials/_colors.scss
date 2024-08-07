@@ -1,66 +1,66 @@
 @use './variables' as *;
-@use './mixins' as *;
-@use './functions' as f;
+
 
 body {
-    background-color: #F5F7F8;
-    color: #707070;
-    color: #304D30;
+    background-color: $white-1;
+    color: $green-5;
 }
 
 h1,
 h2 {
-    color: #163020;
+    color: $green-6;
 }
 
 h3,
 h4,
 h5,
 h6 {
-    color: #76885B;
-    color: #707070;
+    color: $grey-2;
 }
 
 
 .link-button {
-    background-color: #76885B;
-    color: white;
+    background-color: $green-3;
+    color: $white-1;
 }
 
 .link-button:hover {
-    background-color: #5a6d41;
-    box-shadow: 1px 1px 2px grey;
-    color: white;
+    background-color: $green-4;
+    box-shadow: 1px 1px 2px $grey-1;
+    color: $white-1;
 }
 
 hr {
-    border: 1px solid #bfccb5;
+    border: 1px solid $green-2;
 }
 
 a {
-    color: #5a6d41;
+    color: $green-4;
 
     &:hover {
-        color: #76885B;
+        color: $green-3;
     }
 }
 
-// :focus {
-//     outline: 2px solid $orange-2;
-// }
+:focus {
+    outline: 2px solid $green-1;
+}
 
 // Carousel
 /* Caption text */
 .carousel__image-description {
-    background-color: #76885B;
-    color: white;
-    // border-top: 1px solid $brown-7;
+    background-color: $green-3;
+    color: $white-1;
 }
 
 //Next & previous buttons
 .carousel__prev-button,
 .carousel__next-button {
-    color: #76885B;
+    color: $green-3;
+}
+
+.carousel__cover {
+    background: $white-2;
 }
 
 .carousel__progress-container {
@@ -69,15 +69,15 @@ a {
 
 .current-container,
 .carousel__progress-bar {
-    background-color: #bfccb5;
+    background-color: $green-2;
 }
 
 .carousel__progress-list:focus,
 .current-bar:focus {
-    outline: 2px solid #A7D397;
+    outline: 2px solid $green-1;
 }
 
 .current-bar,
 .finished-bar {
-    background-color: #76885B;
+    background-color: $green-3;
 }

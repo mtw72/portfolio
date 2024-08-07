@@ -529,56 +529,62 @@ footer a:hover {
 }
 
 body {
-  background-color: #F5F7F8;
-  color: #707070;
-  color: #304D30;
+  background-color: rgb(255, 255, 255);
+  color: rgb(48, 77, 48);
 }
 
 h1,
 h2 {
-  color: #163020;
+  color: rgb(22, 48, 32);
 }
 
 h3,
 h4,
 h5,
 h6 {
-  color: #76885B;
-  color: #707070;
+  color: rgb(112, 112, 112);
 }
 
 .link-button {
-  background-color: #76885B;
-  color: white;
+  background-color: rgb(118, 136, 91);
+  color: rgb(255, 255, 255);
 }
 
 .link-button:hover {
-  background-color: #5a6d41;
-  -webkit-box-shadow: 1px 1px 2px grey;
-          box-shadow: 1px 1px 2px grey;
-  color: white;
+  background-color: rgb(90, 109, 65);
+  -webkit-box-shadow: 1px 1px 2px rgb(128, 128, 128);
+          box-shadow: 1px 1px 2px rgb(128, 128, 128);
+  color: rgb(255, 255, 255);
 }
 
 hr {
-  border: 1px solid #bfccb5;
+  border: 1px solid rgb(191, 204, 181);
 }
 
 a {
-  color: #5a6d41;
+  color: rgb(90, 109, 65);
 }
 a:hover {
-  color: #76885B;
+  color: rgb(118, 136, 91);
+}
+
+:focus {
+  outline: 2px solid rgb(167, 211, 151);
 }
 
 /* Caption text */
 .carousel__image-description {
-  background-color: #76885B;
-  color: white;
+  background-color: rgb(118, 136, 91);
+  color: rgb(255, 255, 255);
 }
 
 .carousel__prev-button,
 .carousel__next-button {
-  color: #76885B;
+  color: rgb(118, 136, 91);
+}
+
+.carousel__cover {
+  background: rgb(245, 247, 248);
 }
 
 .carousel__progress-container {
@@ -587,17 +593,17 @@ a:hover {
 
 .current-container,
 .carousel__progress-bar {
-  background-color: #bfccb5;
+  background-color: rgb(191, 204, 181);
 }
 
 .carousel__progress-list:focus,
 .current-bar:focus {
-  outline: 2px solid #A7D397;
+  outline: 2px solid rgb(167, 211, 151);
 }
 
 .current-bar,
 .finished-bar {
-  background-color: #76885B;
+  background-color: rgb(118, 136, 91);
 }
 
 .skip-link:focus {
@@ -739,7 +745,6 @@ h3.pen::before {
   left: 0;
   width: 500px;
   height: 630px;
-  background: #F5F7F8;
   z-index: 4;
 }
 
