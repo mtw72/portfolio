@@ -2,23 +2,27 @@
 @use '../partials/functions' as f;
 
 .link-button {
+    position: relative;
     display: block;
     width: f.rem(200);
     height: f.rem(40);
     line-height: f.rem(40); // This aligns the text vertically within the link
+    margin-block: f.rem(10);
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-block: f.rem(10);
     transition: 0.5s;
-    position: relative;
+
+    @include min-mq (lg) {
+        margin-block: f.rem(20);
+    }
 
     &::after {
         content: '>>';
         position: absolute;
         right: 10%;
-        transition: 0.5s;
         opacity: 0;
+        transition: 0.5s;
     }
 
     &:hover {

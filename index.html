@@ -55,10 +55,13 @@
 </head>
 
 <body>
+    <noscript class="no-script">
+        <p>JavaScript is disabled. The page may not function properly.</p>
+    </noscript>
+
     <main>
         <section>
-            <h1>R2 Place <span></span></h1>
-            <!-- <a href="https://www.flaticon.com/free-icons/tea-leaf" title="tea leaf icons">Tea leaf icons created by Kalashnyk - Flaticon</a> -->
+            <h1>R2 Place</h1>
             <p>A virtual restaurant website with visually appealing, interactive and user-friendly features.</p>
             <a class="link-button" href="https://mtw72.github.io/R2place/" target="_blank">
                 Visit Website
@@ -66,6 +69,12 @@
         </section>
 
         <section>
+            <!-- Loader -->
+            <!-- <div class="loader__container">
+                <div class="loader__object"></div>
+            </div> -->
+
+            <!-- <div class="website-content website-content--hidden"> -->
             <div class="carousel" aria-roledescription="carousel">
                 <div id="carousel__track" aria-live="off">
                     <!-- images with caption text -->
@@ -86,7 +95,7 @@
                     <!-- video with caption text -->
                     <div class="carousel__slide" role="tabpanel" aria-roledescription="slide">
                         <video class="carousel__video" src="./src/assets/images/raw/r2-run-gulp.mp4" type="video/mp4"
-                            controls>
+                            muted controls>
                             Your browser does not support the video tag.
                         </video>
                         <div class="carousel__image-description">Using Gulp to automate workflow</div>
@@ -137,12 +146,12 @@
                     </div>
                 </div>
             </div>
+            <!-- </div> -->
         </section>
 
         <section>
-            <!-- <a href="https://www.flaticon.com/free-icons/leaves" title="leaves icons">Leaves icons created by Xinh
-                Studio - Flaticon</a> -->
-            <h2>Technology Used <span></span></h2>
+
+            <h2>Technology Used</h2>
             <!-- <a href="https://www.flaticon.com/free-icons/arrow" title="arrow icons">Arrow icons created by Creative Stall Premium - Flaticon</a> -->
             <ul>
                 <li>Figma - Wireframing</li>
@@ -156,7 +165,7 @@
 
 
         <section>
-            <h2>Website Design <span></span></h2>
+            <h2>Website Design</h2>
             <ul>
                 <li>Utilized Figma to generate <b>wireframes</b></li>
                 <li>Implemented layout using <b>CSS Flexbox</b> & <b>Grid</b></li>
@@ -168,7 +177,7 @@
 
 
         <section>
-            <h2>Website Features <span></span></h2>
+            <h2>Website Features</h2>
             <!-- <a href="https://www.flaticon.com/free-icons/feature" title="feature icons">Feature icons created by kerismaker - Flaticon</a> -->
             <h3 class="pen">Menu</h3>
             <ul>
@@ -185,7 +194,7 @@
 
 
         <section>
-            <h2>Quality Assurance <span></span></h2>
+            <h2>Quality Assurance</h2>
             <ul>
                 <li>Achieved <b>near-perfect scores</b> on <b>Google PageSpeed Insights</b>, consistently scoring 96-100
                     for
@@ -201,9 +210,18 @@
             </ul>
         </section>
 
+        <section>
+            <h2>Accessibility</h2>
+            <ul>
+                <li>Design with <b>sufficient color contrast</b></li>
+                <li><b>Skip link</b> for easy navigation</li>
+                <li>Sufficient <b>ARIA tags</b> for screen readers</li>
+                <li>Optimized for keyboard users</li>
+            </ul>
+        </section>
 
         <section>
-            <h2>Streamlined Workflow <span></span></h2>
+            <h2>Streamlined Workflow</h2>
             <p class="pen">Utilized Gulp and npm to:</p>
             <ul>
                 <li>Generate development and production code</li>

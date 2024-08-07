@@ -7,7 +7,7 @@ ul {
 
 ul li {
     position: relative;
-    margin-left: 30px;
+    margin-left: f.rem(30);
     margin-block: f.rem(5);
 }
 
@@ -21,8 +21,8 @@ ul li {
     position: absolute;
     left: -5px;
     bottom: -5px;
-    width: 40px;
-    height: 40px;
+    width: f.rem(40);
+    height: f.rem(40);
     background-image: url('../../src/assets/images/raw/pen.png');
     background-size: contain;
     background-repeat: no-repeat;
@@ -55,7 +55,7 @@ h3.pen::before {
 //     /* Ensure the pseudo-element is displayed */
 // }
 
-// h2 span {
+// h3 span {
 //     @include min-mq (xxs) {
 //         position: relative;
 //         /* Make parent element positioned relatively */
@@ -64,7 +64,7 @@ h3.pen::before {
 //     }
 // }
 
-// h2 span::after {
+// h3 span::after {
 //     @include min-mq (xxs) {
 //         content: '';
 //         position: absolute;

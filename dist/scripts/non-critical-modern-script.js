@@ -24,6 +24,8 @@ const bar2 = document.getElementById("bar2");
 const bar3 = document.getElementById("bar3");
 // const bar4 = document.getElementById("bar4");
 // const bar5 = document.getElementById("bar5");
+const video = document.querySelector(".carousel__video");
+
 
 // Create variables for progress bar
 let currentProgressContainer = document.querySelector(".carousel__progress-container.current-container");
@@ -154,6 +156,14 @@ function showSlides(n) {
         slides[i].classList.add("previous-slide");
       }
     }
+  }
+
+  // For slide 3 video to autoplay
+  if (slideIndex === 2) {
+    video.play();
+  } else {
+    video.pause();
+    video.currentTime = 0; // Reset video
   }
 
   // Show the current slide by adding the 'current-slide' class, and setting 'aria-current' attribute to true
