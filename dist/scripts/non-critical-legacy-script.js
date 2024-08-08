@@ -15,7 +15,7 @@ var time = 5; //5 seconds
 var timeInterval = time * 1000 / 100;
 
 // Get the elements in carousel
-var carouselTrack = document.getElementById("carousel__track");
+var carouselTrack = document.querySelector(".carousel__track");
 var slides = document.getElementsByClassName("carousel__slide");
 var prevButton = document.querySelector(".carousel__prev-button");
 var nextButton = document.querySelector(".carousel__next-button");

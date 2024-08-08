@@ -572,20 +572,18 @@ a:hover {
   outline: 2px solid rgb(167, 211, 151);
 }
 
-/* Caption text */
 .carousel__image-description {
   background-color: rgb(118, 136, 91);
   color: rgb(255, 255, 255);
 }
 
+.carousel__cover {
+  background-color: rgb(245, 247, 248);
+}
+
 .carousel__prev-button,
 .carousel__next-button {
   color: rgb(118, 136, 91);
-}
-
-.carousel__cover {
-  background-color: rgb(245, 247, 248);
-  background-color: red;
 }
 
 .carousel__progress-container {
@@ -701,17 +699,6 @@ h3.pen::before {
   height: 100%;
   overflow: hidden;
 }
-@media all and (min-width: 62em) {
-  .carousel {
-    max-width: 31.25rem;
-    height: 100%;
-  }
-}
-
-.carousel__video {
-  width: 31.25rem;
-  height: 100%;
-}
 
 /* Hide the images by default */
 .carousel__slide {
@@ -739,31 +726,6 @@ h3.pen::before {
   left: 100%;
 }
 
-/* Cover element to hide previous slides */
-.carousel__cover {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 500px;
-  height: 345px;
-  height: 355px;
-  height: 365px;
-  height: 378px;
-  height: 388px;
-  height: 398px;
-  height: clamp(345px, 1.06 * (100vw - 250px) + 345px, 398px);
-}
-@media all and (min-width: 18.75em) {
-  .carousel__cover {
-    height: clamp(380px, 380px + 30vw, 450px);
-  }
-}
-@media all and (min-width: 36em) {
-  .carousel__cover {
-    height: 630px;
-  }
-}
-
 .carousel__image,
 .carousel__video {
   display: block;
@@ -771,6 +733,11 @@ h3.pen::before {
   width: 100%;
   height: auto;
   border-radius: 5px 5px 0 0;
+}
+
+.carousel__video {
+  width: 31.25rem;
+  height: 100%;
 }
 
 /* // carousel text */
@@ -796,6 +763,15 @@ h3.pen::before {
     max-height: 2.8125rem;
     padding-block: 0.375rem;
   }
+}
+
+/* Cover element to hide previous slides */
+.carousel__cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 500px;
+  height: auto;
 }
 
 /* //Next & previous buttons */
@@ -826,6 +802,23 @@ h3.pen::before {
   right: -4px;
 }
 
+@media all and (min-width: 28.125em) {
+  .carousel__prev-button,
+  .carousel__next-button {
+    top: 42%;
+    font-size: 1.25rem;
+    -webkit-transition: 0.6s ease;
+    transition: 0.6s ease;
+    padding: 1rem;
+    color: red;
+  }
+  .carousel__prev-button {
+    left: -30px;
+  }
+  .carousel__next-button {
+    right: -30px;
+  }
+}
 /* The dots indicators */
 .carousel__bottom-control {
   margin-top: 146%;
@@ -846,7 +839,7 @@ h3.pen::before {
 }
 @media all and (min-width: 18.75em) {
   .carousel__bottom-control {
-    margin-top: 131.5%;
+    margin-top: 132%;
   }
 }
 @media all and (min-width: 28.125em) {

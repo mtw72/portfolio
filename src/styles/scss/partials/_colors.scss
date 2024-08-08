@@ -47,21 +47,21 @@ a {
 }
 
 // Carousel
-/* Caption text */
+// Caption text
 .carousel__image-description {
     background-color: $green-3;
     color: $white-1;
+}
+
+// Cover element to hide previous slides
+.carousel__cover {
+    background-color: $white-2;
 }
 
 //Next & previous buttons
 .carousel__prev-button,
 .carousel__next-button {
     color: $green-3;
-}
-
-.carousel__cover {
-    background-color: $white-2;
-    background-color: red;
 }
 
 .carousel__progress-container {

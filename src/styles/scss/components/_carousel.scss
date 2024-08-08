@@ -9,16 +9,6 @@
     max-width: f.rem(500);
     height: 100%;
     overflow: hidden;
-
-    @include min-mq (lg) {
-        max-width: f.rem(500);
-        height: 100%;
-    }
-}
-
-.carousel__video {
-    width: f.rem(500);
-    height: 100%;
 }
 
 /* Hide the images by default */
@@ -46,29 +36,6 @@
     left: 100%;
 }
 
-/* Cover element to hide previous slides */
-.carousel__cover {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 500px;
-    height: 345px; // 250vp px
-    height: 355px; // 260vp px
-    height: 365px; // 270vp px
-    height: 378px; // 280vp px
-    height: 388px; // 290vp px
-    height: 398px; // 300vp px
-    height: clamp(345px, calc(1.06 * (100vw - 250px) + 345px), 398px);
-
-    @include min-mq (xxs) {
-        height: clamp(380px, 380px + 30vw, 450px);
-    }
-
-    @include min-mq (sm) {
-        height: 630px;
-    }
-}
-
 .carousel__image,
 .carousel__video {
     display: block;
@@ -76,6 +43,11 @@
     width: 100%;
     height: auto;
     border-radius: 5px 5px 0 0;
+}
+
+.carousel__video {
+    width: f.rem(500);
+    height: 100%;
 }
 
 /* // carousel text */
@@ -95,6 +67,29 @@
         padding-block: f.rem(6);
     }
 }
+
+/* Cover element to hide previous slides */
+.carousel__cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 500px;
+    height: auto;
+    // height: clamp(f.rem(345), calc(1.1 * (100vw - f.rem(250)) + f.rem(345)), f.rem(398));
+
+    // @include min-mq (xxs) {
+    //     height: clamp(f.rem(375), calc(1.1 * (100vw - f.rem(300)) + f.rem(375)), f.rem(530));
+    // }
+
+    // @include custom-min-mq(440) {
+    //     height: f.rem(540);
+    // }
+
+    // @include min-mq (xs) {
+    //     height: clamp(f.rem(530), calc(1.03 * (100vw - f.rem(450)) + f.rem(530)), f.rem(630));
+    // }
+}
+
 
 /* //Next & previous buttons */
 .carousel__prev-button,
@@ -118,25 +113,26 @@
 
 .carousel__next-button {
     right: -4px;
+}
 
-    // @include min-mq (xs) {
+@include min-mq (xs) {
 
-    //     .carousel__prev-button,
-    //     .carousel__next-button {
-    //         top: 42%;
-    //         font-size: 1.25rem;
-    //         transition: 0.6s ease;
-    //         padding: 1rem;
-    //     }
+    .carousel__prev-button,
+    .carousel__next-button {
+        top: 42%;
+        font-size: 1.25rem;
+        transition: 0.6s ease;
+        padding: 1rem;
+        color: red;
+    }
 
-    //     .carousel__prev-button {
-    //         left: -30px;
-    //     }
+    .carousel__prev-button {
+        left: -30px;
+    }
 
-    //     .carousel__next-button {
-    //         right: -30px;
-    //     }
-    // }
+    .carousel__next-button {
+        right: -30px;
+    }
 }
 
 /* The dots indicators */
@@ -149,7 +145,7 @@
     z-index: 50;
 
     @include min-mq (xxs) {
-        margin-top: 131.5%;
+        margin-top: 132%;
     }
 
     @include min-mq (xs) {
