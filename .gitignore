@@ -80,5 +80,6 @@ r2place.css
 gulp.config.js
 gulpfile.babel.js
 resizeImage.js
+img.js
 reference/
 /reference/

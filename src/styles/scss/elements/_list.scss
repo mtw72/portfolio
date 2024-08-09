@@ -2,7 +2,7 @@
 @use '../partials/functions' as f;
 
 ul {
-    list-style-image: url('../../src/assets/images/raw/arrow-right.png');
+    list-style-image: url('../../dist/assets/images/arrow-right.png');
 }
 
 ul li {
@@ -23,7 +23,7 @@ ul li {
     bottom: -5px;
     width: f.rem(40);
     height: f.rem(40);
-    background-image: url('../../src/assets/images/raw/pen.png');
+    background-image: url('../../dist/assets/images/pen.png');
     background-size: contain;
     background-repeat: no-repeat;
     display: inline-block;

@@ -626,7 +626,7 @@ a:hover {
 }
 
 ul {
-  list-style-image: url("../../src/assets/images/raw/arrow-right.png");
+  list-style-image: url("../../dist/assets/images/arrow-right.png");
 }
 
 ul li {
@@ -647,7 +647,7 @@ ul li {
   bottom: -5px;
   width: 2.5rem;
   height: 2.5rem;
-  background-image: url("../../src/assets/images/raw/pen.png");
+  background-image: url("../../dist/assets/images/pen.png");
   background-size: contain;
   background-repeat: no-repeat;
   display: inline-block;
