@@ -7,15 +7,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* height: 50vh; */
 }
 
 .loader__container {
-    /* position: relative; */
     margin: auto;
     max-width: 31.25rem;
     aspect-ratio: 0.69/1;
-    /* overflow: hidden; */
 }
 
 @media all and (min-width: 18.75em) {
@@ -46,7 +43,7 @@
     animation: spin 2s linear infinite;
 }
 
-@media all and (min-width: 36em) {
+@media all and (min-width: 34em) {
     .loader__object {
         border: 14px solid rgb(243, 243, 243);
         border-top: 14px solid rgb(118, 136, 91);
