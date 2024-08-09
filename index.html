@@ -2,32 +2,32 @@
 <html lang="en-gb" dir="ltr">
 
 <head>
-    <title>May's Portfolio | R2 Place</title>
+    <title>MT's Portfolio | R2 Place</title>
 
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="theme-color" content="rgb(191, 204, 181)">
+    <meta name="theme-color" content="rgb(245, 247, 248)">
     <meta name='robots' content='max-image-preview:large'>
     <meta name="keywords"
-        content="Portfolio, restaurant website, automate workflow, excellent marks in Google PageSpeed Insights">
+        content="Portfolio, restaurant website, workflow automation, excellent marks in Google PageSpeed Insights">
     <meta name="description" content="Portfolio showcasing a virtual restaurant website">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image:alt" content="May's Portfolio | R2 Place">
-    <!-- <meta name="twitter:image" content="https://mtw72.github.io/R2place/dist/assets/images/twitter-image.jpeg"> -->
+    <meta name="twitter:image:alt" content="MT's Portfolio | R2 Place">
+    <meta name="twitter:image" content="https://mtw72.github.io/R2place/dist/assets/images/twitter-image.png">
 
-    <meta property="og:url" content="https://mtw72.github.io/R2-revising/">
+    <!-- <meta property="og:url" content="https://mtw72.github.io/R2-revising/"> -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Portfolio | R2 Place">
+    <meta property="og:title" content="MT's Portfolio | R2 Place">
     <meta property="og:description" content="Portfolio showcasing a virtual restaurant website">
     <meta property="og:locale" content="en_GB">
-    <!-- <meta property="og:image:secure_url" content="https://mtw72.github.io/R2place/dist/assets/images/og-image.jpeg"> -->
+    <meta property="og:image:secure_url" content="https://mtw72.github.io/R2place/dist/assets/images/og-image.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
 
     <link rel="icon" type="image/x-icon" href="./src/assets/images/raw/favicon.ico">
-    <link rel="canonical" href="https://mtw72.github.io/R2place/">
+    <!-- <link rel="canonical" href="https://mtw72.github.io/R2place/"> -->
 
     <!-- Critical resources -->
     <!-- Google fonts -->
@@ -37,10 +37,11 @@
     <script src="./dist/scripts/critical-modern-script.min.js"></script>
 
     <!-- Non-critical resources -->
-    <link rel="preload" href="./dist/styles/scss-style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="./dist/styles/scss-style.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
 
-    <script defer src="./dist/scripts/non-critical-modern-script.js"></script>
-    <script nomodule defer src="./dist/scripts/non-critical-legacy-script.js"></script>
+    <script defer src="./dist/scripts/non-critical-modern-script.min.js"></script>
+    <script nomodule defer src="./dist/scripts/non-critical-legacy-script.min.js"></script>
 
     <!-- No script -->
     <noscript>
@@ -62,7 +63,7 @@
             </a>
         </section>
 
-        <section>
+        <div>
             <!-- Loader -->
             <div class="loader__container">
                 <div class="loader__object"></div>
@@ -70,7 +71,7 @@
 
             <div class="website-content website-content--hidden">
                 <div class="carousel" aria-roledescription="carousel">
-                    <div class="carousel__track" aria-live="off">
+                    <div id="carousel__track" aria-live="off">
                         <!-- images with caption text -->
                         <div class="carousel__slide" role="tabpanel" aria-roledescription="slide">
                             <img class="carousel__image" src="./src/assets/images/raw/wireframe-iPad.jpg"
@@ -88,8 +89,7 @@
 
                         <!-- video with caption text -->
                         <div class="carousel__slide" role="tabpanel" aria-roledescription="slide">
-                            <video class="carousel__video" src="./src/assets/images/raw/r2-run-gulp.mp4"
-                                type="video/mp4" muted controls>
+                            <video class="carousel__video" src="./src/assets/images/raw/r2-run-gulp.mp4" muted controls>
                                 Your browser does not support the video tag.
                             </video>
                             <div class="carousel__image-description">Using Gulp to automate workflow</div>
@@ -144,7 +144,7 @@
 
                 </div>
             </div>
-        </section>
+        </div>
 
         <section>
 
@@ -232,8 +232,9 @@
             </ul>
         </section>
     </main>
+    <hr>
 </body>
-<hr>
+
 <footer>
     <p>Need help with a project or want to discuss a potential collaboration?</p>
     <p>Feel free to contact me via email at <a href="mailto:mtwong72@gmail.com">mtwong72@gmail.com</a>.

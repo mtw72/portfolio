@@ -9,7 +9,7 @@ const time = 5; //5 seconds
 const timeInterval = time * 1000 / 100;
 
 // Get the elements in carousel
-const carouselTrack = document.querySelector(".carousel__track");
+const carouselTrack = document.getElementById("carousel__track");
 const slides = document.getElementsByClassName("carousel__slide");
 const prevButton = document.querySelector(".carousel__prev-button");
 const nextButton = document.querySelector(".carousel__next-button");

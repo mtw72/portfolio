@@ -698,7 +698,7 @@ h3.pen::before {
   height: auto;
 }
 
-.carousel__track {
+#carousel__track {
   position: relative;
   margin: auto;
   max-width: 31.25rem;
@@ -706,17 +706,17 @@ h3.pen::before {
   overflow: hidden;
 }
 @media all and (min-width: 18.75em) {
-  .carousel__track {
+  #carousel__track {
     aspect-ratio: 0.75/1;
   }
 }
 @media all and (min-width: 23.625em) {
-  .carousel__track {
+  #carousel__track {
     aspect-ratio: 0.78/1;
   }
 }
 @media all and (min-width: 34em) {
-  .carousel__track {
+  #carousel__track {
     aspect-ratio: 0.8/1;
   }
 }
