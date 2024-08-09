@@ -15,18 +15,18 @@
     <meta name="description" content="Portfolio showcasing a virtual restaurant website">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image:alt" content="MT's Portfolio | R2 Place">
-    <meta name="twitter:image" content="https://mtw72.github.io/R2place/dist/assets/images/twitter-image.png">
+    <meta name="twitter:image" content="https://mtw72.github.io/R2place/dist/assets/images/meta-image.png">
 
     <!-- <meta property="og:url" content="https://mtw72.github.io/R2-revising/"> -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="MT's Portfolio | R2 Place">
     <meta property="og:description" content="Portfolio showcasing a virtual restaurant website">
     <meta property="og:locale" content="en_GB">
-    <meta property="og:image:secure_url" content="https://mtw72.github.io/R2place/dist/assets/images/og-image.png">
+    <meta property="og:image:secure_url" content="https://mtw72.github.io/R2place/dist/assets/images/meta-image.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
 
-    <link rel="icon" type="image/x-icon" href="./src/assets/images/raw/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="./dist/assets/images/favicon.ico">
     <!-- <link rel="canonical" href="https://mtw72.github.io/R2place/"> -->
 
     <!-- Critical resources -->
@@ -74,16 +74,44 @@
                     <div id="carousel__track" aria-live="off">
                         <!-- images with caption text -->
                         <div class="carousel__slide" role="tabpanel" aria-roledescription="slide">
-                            <img class="carousel__image" src="./src/assets/images/raw/wireframe-iPad.jpg"
+                            <!-- <img class="carousel__image" src="./src/assets/images/raw/wireframe-iPad.jpg"
                                 onerror="this.onerror=null; this.src='./src/assets/images/raw/wireframe-iPad.jpg';"
-                                alt="Wireframing by Figma" fetchpriority="high">
+                                alt="Wireframing by Figma" fetchpriority="high"> -->
+
+                            <picture class="carousel__image">
+                                <source media="(min-width: 575.5px)"
+                                    srcset="./dist/assets/images/wireframe-iPad-xs.webp" type="image/webp">
+                                <source media="(min-width: 575.5px)"
+                                    srcset="./dist/assets/images/wireframe-iPad-xs.jpeg">
+                                <source media="(min-width: 449.5px)"
+                                    srcset="./dist/assets/images/wireframe-iPad-xxs.webp" type="image/webp">
+                                <source media="(min-width: 449.5px)"
+                                    srcset="./dist/assets/images/wireframe-iPad-xxs.jpeg">
+                                <img src="./dist/assets/images/wireframe-iPad-xxxs.webp"
+                                    onerror="this.onerror=null; this.src='./dist/assets/images/wireframe-iPad-xxxs.jpeg';"
+                                    alt="Wireframing by Figma" fetchpriority="high">
+                            </picture>
                             <div class="carousel__image-description">Wireframing by Figma</div>
                         </div>
 
                         <div class="carousel__slide" role="tabpanel" aria-roledescription="slide">
-                            <img class="carousel__image" src="./src/assets/images/raw/r2-googletest.jpg"
+                            <!-- <img class="carousel__image" src="./src/assets/images/raw/r2-googletest.jpg"
                                 onerror="this.onerror=null; this.src='./images/satay-chicken-skewers.jpeg';"
-                                alt="Result of Google PageSpeed Insights" loading="lazy">
+                                alt="Result of Google PageSpeed Insights" loading="lazy"> -->
+
+                            <picture class="carousel__image">
+                                <source media="(min-width: 575.5px)" srcset="./dist/assets/images/r2-googletest-xs.webp"
+                                    type="image/webp">
+                                <source media="(min-width: 575.5px)"
+                                    srcset="./dist/assets/images/r2-googletest-xs.jpeg">
+                                <source media="(min-width: 449.5px)"
+                                    srcset="./dist/assets/images/r2-googletest-xxs.webp" type="image/webp">
+                                <source media="(min-width: 449.5px)"
+                                    srcset="./dist/assets/images/r2-googletest-xxs.jpeg">
+                                <img src="./dist/assets/images/r2-googletest-xxxs.webp"
+                                    onerror="this.onerror=null; this.src='./dist/assets/images/r2-googletest-xxxs.jpeg';"
+                                    alt="Result of Google PageSpeed Insights" loading="lazy">
+                            </picture>
                             <div class="carousel__image-description">Result of Google PageSpeed Insights</div>
                         </div>
 
