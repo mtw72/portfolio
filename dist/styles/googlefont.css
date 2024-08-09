@@ -2,7 +2,7 @@
 /* Lato */
 @font-face {
     font-family: 'MontSerrat';
-    font-style: 600;
+    font-style: Semibold;
     font-weight: 600;
     src: url('../assets/webfonts/googlefonts/Montserrat-SemiBold.woff2') format('woff2'),
         url('../assets/webfonts/googlefonts/Montserrat-SemiBold.ttf') format('ttf');
@@ -13,7 +13,7 @@
 /* Lato */
 @font-face {
     font-family: 'Lato';
-    font-style: 400;
+    font-style: Regular;
     font-weight: 400;
     src: url('../assets/webfonts/googlefonts/Lato-Regular.woff2') format('woff2'),
         url('../assets/webfonts/googlefonts/Lato-Regular.ttf') format('ttf');
