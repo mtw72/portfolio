@@ -7,13 +7,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 50vh;
 }
 
 .loader__object {
     border-radius: 50%;
     border: 10px solid rgb(243, 243, 243);
-    border-top: 10px solid rgb(248, 203, 166);
+    border-top: 10px solid rgba(182, 248, 166, .9);
     width: 80px;
     height: 80px;
     -webkit-animation: spin 2s linear infinite;
@@ -22,8 +22,8 @@
 
 @media all and (min-width: 36em) {
     .loader__object {
-        border: 16px solid rgb(243, 243, 243);
-        border-top: 16px solid rgb(248, 203, 166);
+        border: 14px solid rgb(243, 243, 243);
+        border-top: 14px solid rgba(182, 248, 166, .9);
         width: 120px;
         height: 120px;
     }
@@ -37,9 +37,4 @@
     100% {
         transform: rotate(360deg);
     }
-}
-
-.loader__container p {
-    margin: 20px auto 0 auto;
-    font-family: "Dancing Script", cursive;
 }
