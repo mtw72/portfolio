@@ -16,7 +16,33 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    height: 50vh;
+    /* height: 50vh; */
+}
+
+.loader__container {
+    /* position: relative; */
+    margin: auto;
+    max-width: 31.25rem;
+    aspect-ratio: 0.69/1;
+    /* overflow: hidden; */
+}
+
+@media all and (min-width: 18.75em) {
+    .loader__container {
+        aspect-ratio: 0.75/1;
+    }
+}
+
+@media all and (min-width: 23.625em) {
+    .loader__container {
+        aspect-ratio: 0.78/1;
+    }
+}
+
+@media all and (min-width: 34em) {
+    .loader__container {
+        aspect-ratio: 0.8/1;
+    }
 }
 
 .loader__object {

@@ -1,19 +1,56 @@
 @use '../partials/mixins' as *;
 @use '../partials/functions' as f;
 
+// .link-button {
+//     position: relative;
+//     display: block;
+//     width: f.rem(200);
+//     height: f.rem(40);
+//     line-height: f.rem(40); // This aligns the text vertically within the link
+//     margin-block: f.rem(10);
+//     border: none;
+//     border-radius: 5px;
+//     cursor: pointer;
+//     transition: 0.5s;
+
+//     @include min-mq (lg) {
+//         margin-block: f.rem(20);
+//     }
+
+//     &::after {
+//         content: '>>';
+//         position: absolute;
+//         right: 10%;
+//         opacity: 0;
+//         transition: 0.5s;
+//     }
+
+//     &:hover {
+//         padding-left: f.rem(30);
+//     }
+
+//     &:hover::after {
+//         right: f.rem(15);
+//         opacity: 1;
+//     }
+// }
+
 .link-button {
     position: relative;
     display: block;
     width: f.rem(200);
     height: f.rem(40);
-    line-height: f.rem(40); // This aligns the text vertically within the link
-    margin-block: f.rem(10);
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+
+.link-button span {
+    line-height: f.rem(40); // This aligns the text vertically within the link
+    margin-block: f.rem(10);
     transition: 0.5s;
 
-    @include min-mq (lg) {
+    @include min-mq(lg) {
         margin-block: f.rem(20);
     }
 
@@ -22,15 +59,29 @@
         position: absolute;
         right: 10%;
         opacity: 0;
-        transition: 0.5s;
     }
 
-    &:hover {
-        padding-left: f.rem(30);
+    // Keyframes for animation
+    @keyframes hoverAnimation {
+        0% {
+            padding-left: 0;
+            right: 10%;
+            opacity: 0;
+        }
+
+        50% {
+            padding-left: f.rem(30);
+            right: f.rem(15);
+            opacity: 1;
+        }
+
+        100% {
+            padding-left: 0;
+            right: 10%;
+            opacity: 0;
+        }
     }
 
-    &:hover::after {
-        right: f.rem(15);
-        opacity: 1;
-    }
+    // Applying the animation
+    animation: hoverAnimation 2s infinite;
 }
