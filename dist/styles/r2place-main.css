@@ -691,16 +691,36 @@ h3.pen::before {
   opacity: 1;
 }
 
-/* Slideshow container */
 .carousel {
   position: relative;
   margin: auto;
   max-width: 31.25rem;
-  height: 100%;
-  overflow: hidden;
+  height: auto;
 }
 
-/* Hide the images by default */
+.carousel__track {
+  position: relative;
+  margin: auto;
+  max-width: 31.25rem;
+  aspect-ratio: 0.69/1;
+  overflow: hidden;
+}
+@media all and (min-width: 18.75em) {
+  .carousel__track {
+    aspect-ratio: 0.75/1;
+  }
+}
+@media all and (min-width: 23.625em) {
+  .carousel__track {
+    aspect-ratio: 0.78/1;
+  }
+}
+@media all and (min-width: 34em) {
+  .carousel__track {
+    aspect-ratio: 0.8/1;
+  }
+}
+
 .carousel__slide {
   position: absolute;
   width: 100%;
@@ -710,18 +730,15 @@ h3.pen::before {
   transition: left 1s ease;
 }
 
-/* Show the current slide */
 .carousel__slide.current-slide {
   left: 0;
   z-index: 7;
 }
 
-/* Move the previous slide off-screen to the left */
 .carousel__slide.previous-slide {
   left: -100%;
 }
 
-/* Move the next slide off-screen to the right */
 .carousel__slide.next-slide {
   left: 100%;
 }
@@ -731,18 +748,12 @@ h3.pen::before {
   display: block;
   margin-inline: auto;
   width: 100%;
-  height: auto;
+  max-width: 31.25rem;
+  aspect-ratio: 0.86/1;
   border-radius: 5px 5px 0 0;
 }
 
-.carousel__video {
-  width: 31.25rem;
-  height: 100%;
-}
-
-/* // carousel text */
 .carousel__image-description {
-  margin-inline: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -765,24 +776,36 @@ h3.pen::before {
   }
 }
 
-/* Cover element to hide previous slides */
 .carousel__cover {
   position: absolute;
   top: 0;
   left: 0;
   width: 500px;
-  height: auto;
+  height: clamp(21.5625rem, 1.1 * (100vw - 15.625rem) + 21.5625rem, 24.875rem);
+}
+@media all and (min-width: 18.75em) {
+  .carousel__cover {
+    height: clamp(23.4375rem, 1.1 * (100vw - 18.75rem) + 23.4375rem, 33.125rem);
+  }
+}
+@media all and (min-width: 27.5em) {
+  .carousel__cover {
+    height: 33.75rem;
+  }
+}
+@media all and (min-width: 28.125em) {
+  .carousel__cover {
+    height: clamp(33.125rem, 1.03 * (100vw - 28.125rem) + 33.125rem, 39.375rem);
+  }
 }
 
-/* //Next & previous buttons */
 .carousel__prev-button,
 .carousel__next-button {
   cursor: pointer;
   position: absolute;
-  top: 45%;
   width: auto;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 1.5rem;
   -webkit-transition: 0.6s ease;
   transition: 0.6s ease;
   -webkit-user-select: none;
@@ -792,36 +815,39 @@ h3.pen::before {
   border: 0;
   background-color: transparent;
   z-index: 50;
+  display: none;
 }
 
-.carousel__prev-button {
-  left: -4px;
-}
-
-.carousel__next-button {
-  right: -4px;
-}
-
-@media all and (min-width: 28.125em) {
+@media all and (min-width: 41.25em) {
   .carousel__prev-button,
   .carousel__next-button {
     top: 42%;
-    font-size: 1.25rem;
-    -webkit-transition: 0.6s ease;
-    transition: 0.6s ease;
+    font-size: 1.5rem;
     padding: 1rem;
-    color: red;
+    display: block;
   }
   .carousel__prev-button {
-    left: -30px;
+    left: -50px;
   }
   .carousel__next-button {
-    right: -30px;
+    right: -50px;
   }
 }
-/* The dots indicators */
+@media all and (min-width: 48em) {
+  .carousel__prev-button,
+  .carousel__next-button {
+    top: 0;
+    padding: 18rem 2rem;
+  }
+  .carousel__prev-button {
+    left: -80px;
+  }
+  .carousel__next-button {
+    right: -80px;
+  }
+}
 .carousel__bottom-control {
-  margin-top: 146%;
+  margin-top: 3%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -835,22 +861,6 @@ h3.pen::before {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  z-index: 50;
-}
-@media all and (min-width: 18.75em) {
-  .carousel__bottom-control {
-    margin-top: 132%;
-  }
-}
-@media all and (min-width: 28.125em) {
-  .carousel__bottom-control {
-    margin-top: 128%;
-  }
-}
-@media all and (min-width: 36em) {
-  .carousel__bottom-control {
-    margin-top: 630px;
-  }
 }
 
 .carousel__progress-list {
