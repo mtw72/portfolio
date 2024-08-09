@@ -68,12 +68,12 @@ const sharp = require("sharp");
         // resizeImage(imgRawSRC + "r2place-entrance" + jpeg, imgResizedDEST + "r2place-entrance-md" + jpeg, 600, 600 / 1.68);
 
         // Carousel Images - different sizes on different viewport widths
-        resizeImage(imgRawSRC + "r2-googletest" + jpg, imgResizedDEST + "r2-googletest-xxxs" + jpeg, 282, 324.13);
-        resizeImage(imgRawSRC + "r2-googletest" + jpg, imgResizedDEST + "r2-googletest-xxs" + jpeg, 414, 475.86);
-        resizeImage(imgRawSRC + "r2-googletest" + jpg, imgResizedDEST + "r2-googletest-xs" + jpeg, 500, 574.7);
-        resizeImage(imgRawSRC + "wireframe-iPad" + jpg, imgResizedDEST + "wireframe-iPad-xxxs" + jpeg, 282, 324.13);
-        resizeImage(imgRawSRC + "wireframe-iPad" + jpg, imgResizedDEST + "wireframe-iPad-xxs" + jpeg, 414, 475.86);
-        resizeImage(imgRawSRC + "wireframe-iPad" + jpg, imgResizedDEST + "wireframe-iPad-xs" + jpeg, 500, 574.7);
+        // resizeImage(imgRawSRC + "r2-googletest" + jpg, imgResizedDEST + "r2-googletest-xxxs" + jpeg, 282, 324.13);
+        // resizeImage(imgRawSRC + "r2-googletest" + jpg, imgResizedDEST + "r2-googletest-xxs" + jpeg, 414, 475.86);
+        resizeImage(imgRawSRC + "r2-googletest" + jpg, imgResizedDEST + "r2-googletest" + jpeg, 500, 574.7);
+        // resizeImage(imgRawSRC + "wireframe-iPad" + jpg, imgResizedDEST + "wireframe-iPad-xxxs" + jpeg, 282, 324.13);
+        // resizeImage(imgRawSRC + "wireframe-iPad" + jpg, imgResizedDEST + "wireframe-iPad-xxs" + jpeg, 414, 475.86);
+        resizeImage(imgRawSRC + "wireframe-iPad" + jpg, imgResizedDEST + "wireframe-iPad" + jpeg, 500, 574.7);
 
         console.log('IMAGES RESIZE — completed!');
 
