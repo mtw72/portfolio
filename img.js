@@ -51,8 +51,10 @@ const sharp = require("sharp");
             .toFile(imgResizedDEST + "meta-image" + png);
 
         // Carousel Images - different sizes on different viewport widths
-        resizeImage(imgRawSRC + "r2-googletest" + jpg, imgResizedDEST + "r2-googletest" + jpeg, 500, 574.7);
-        resizeImage(imgRawSRC + "wireframe-iPad" + jpg, imgResizedDEST + "wireframe-iPad" + jpeg, 500, 574.7);
+        // resizeImage(imgRawSRC + "r2-googletest" + jpg, imgResizedDEST + "r2-googletest" + jpeg, 500, 574.7);
+        // resizeImage(imgRawSRC + "wireframe-iPad" + jpg, imgResizedDEST + "wireframe-iPad" + jpeg, 500, 574.7);
+        resizeImage(imgRawSRC + "r2-googletest" + jpg, imgResizedDEST + "r2-googletest" + jpeg, 500, 581.39);
+        resizeImage(imgRawSRC + "wireframe-iPad" + jpg, imgResizedDEST + "wireframe-iPad" + jpeg, 500, 581.39);
 
         console.log('IMAGES RESIZE — completed!');
 
