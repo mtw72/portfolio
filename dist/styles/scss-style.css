@@ -749,8 +749,15 @@ h3.pen::before {
   margin-inline: auto;
   width: 100%;
   max-width: 31.25rem;
-  aspect-ratio: 0.87/1;
   border-radius: 5px 5px 0 0;
+}
+
+.carousel__image {
+  aspect-ratio: 0.87/1;
+}
+
+.carousel__video {
+  aspect-ratio: 0.86/1;
 }
 
 .carousel__image-description {
